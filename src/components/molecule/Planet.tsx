@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Planet.module.scss";
 
 type PlanetType = {
@@ -18,14 +19,14 @@ function Planet({
   link,
 }: PlanetType) {
   return (
-    <a href={link}>
+    <Link to={link}>
       <figure
         style={{ maxWidth: width, maxHeight: height, ...position }}
         className={styles.planet}
       >
         <img src={planet} alt={description} />
       </figure>
-    </a>
+    </Link>
   );
 }
 

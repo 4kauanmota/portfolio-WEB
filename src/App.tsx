@@ -19,11 +19,8 @@ function App() {
               <Route index={false} path="contact" element={<Contact />} />
               <Route index={false} path="projects" element={<Projects />} />
               <Route index={false} path="stacks" element={<Stacks />} />
-
-              <Route path="aboutMe">
-                <Route index={true} element={<AboutMe />} />
-                <Route index={false} path="links" element={<Links />} />
-              </Route>
+              <Route index={false} path="aboutMe" element={<AboutMe />} />
+              <Route index={false} path="links" element={<Links />} />
             </Route>
           </Routes>
         </main>

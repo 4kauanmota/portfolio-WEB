@@ -20,7 +20,7 @@ function Space() {
             planet="https://cdn-icons-png.flaticon.com/512/6989/6989415.png"
             description="Venus"
             position={{ left: "25%" }}
-            link=""
+            link="contact"
           />
 
           <Planet
@@ -28,7 +28,7 @@ function Space() {
             planet="https://cdn-icons-png.flaticon.com/512/3594/3594282.png"
             description="Earth"
             position={{ left: "35%", bottom: "20%" }}
-            link=""
+            link="aboutMe"
           />
 
           <Planet
@@ -36,7 +36,7 @@ function Space() {
             planet="https://cdn.pixabay.com/photo/2016/04/01/08/43/cartoon-1298905_1280.png"
             description="Mars"
             position={{ left: "50%", bottom: "50%" }}
-            link=""
+            link="links"
           />
 
           <Planet
@@ -44,7 +44,7 @@ function Space() {
             planet="https://png.pngtree.com/png-clipart/20230326/original/pngtree-saturn-planet-vector-png-image_9004529.png"
             description="Saturn"
             position={{ left: "70%", top: "20%" }}
-            link=""
+            link="stacks"
           />
 
           <Planet
@@ -52,7 +52,7 @@ function Space() {
             planet="https://static.vecteezy.com/system/resources/previews/018/887/916/original/cartoon-neptune-icon-png.png"
             description="Neptune"
             position={{ left: "85%", bottom: "20%" }}
-            link=""
+            link="projects"
           />
         </MouseParallax>
       </section>
