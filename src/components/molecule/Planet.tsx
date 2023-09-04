@@ -1,17 +1,23 @@
-import React from "react";
-import styles from "./scss/Planet.module.scss";
+import styles from "./Planet.module.scss";
 
 type PlanetType = {
   size: number;
   planet: string;
   description: string;
+  position: object;
+  link: string;
 };
 
-function Planet({ size, planet, description }: PlanetType) {
+function Planet({ size, planet, description, position, link }: PlanetType) {
   return (
-    <div style={{ width: size, height: size }} className={styles.planet}>
-      <img src={planet} alt={description} />
-    </div>
+    <a href={link}>
+      <figure
+        style={{ width: size, height: size, ...position }}
+        className={styles.planet}
+      >
+        <img src={planet} alt={description} />
+      </figure>
+    </a>
   );
 }
 
