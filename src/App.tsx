@@ -1,7 +1,8 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Space from "./pages/Space";
 import "./App.scss";
+import Space from "./pages/Space";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Stacks from "./pages/Stacks";

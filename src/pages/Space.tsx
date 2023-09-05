@@ -1,11 +1,13 @@
+import React from "react";
 import { MouseParallax } from "react-just-parallax";
+
+import styles from "./Space.module.scss";
 import Planet from "../components/molecule/Planet";
-import "./Space.scss";
 
 function Space() {
   return (
     <>
-      <section id="space">
+      <section id={styles.space}>
         <Planet
           height={"100%"}
           planet="https://cdn.pixabay.com/photo/2020/06/09/08/16/sun-5277493_1280.png"
