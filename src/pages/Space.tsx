@@ -3,8 +3,9 @@ import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
 import Planet from "../components/molecule/Planet";
+import Background from "../components/molecule/Background";
 
-function Space() {
+const Space = () => {
   return (
     <>
       <section id={styles.space}>
@@ -12,10 +13,11 @@ function Space() {
           height={"100%"}
           planet="https://cdn.pixabay.com/photo/2020/06/09/08/16/sun-5277493_1280.png"
           description="Sun"
-          position={{ left: "-45%" }}
+          position={{ top: 0, left: "-40%" }}
           link=""
         />
 
+        <Background />
         <MouseParallax>
           <Planet
             width={200}
@@ -60,6 +62,6 @@ function Space() {
       </section>
     </>
   );
-}
+};
 
 export default Space;

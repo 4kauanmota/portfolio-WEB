@@ -1,7 +1,7 @@
 import React from "react";
 
-function Stack() {
+const Stack = () => {
   return <div>Stack</div>;
-}
+};
 
 export default Stack;

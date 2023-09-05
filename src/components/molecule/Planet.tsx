@@ -12,24 +12,24 @@ type PlanetType = {
   link: string;
 };
 
-function Planet({
+const Planet = ({
   width,
   height,
   planet,
   description,
   position,
   link,
-}: PlanetType) {
+}: PlanetType) => {
   return (
     <Link to={link}>
       <figure
-        style={{ maxWidth: width, maxHeight: height, ...position }}
+        style={{ maxWidth: width, height: height, ...position }}
         className={styles.planet}
       >
         <img src={planet} alt={description} />
       </figure>
     </Link>
   );
-}
+};
 
 export default Planet;
