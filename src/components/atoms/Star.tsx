@@ -4,7 +4,6 @@ import styles from "./Star.module.scss";
 
 const Star = () => {
   const randomTime = Math.trunc(Math.random() * 50000 + 1);
-  console.log(randomTime);
 
   setInterval(() => {
     const star = document.getElementById(styles.star);

@@ -1,6 +1,10 @@
+@use "/public/theme/colors.scss";
+
+$size: 5px;
+
 @keyframes starAnim {
-  75% {
-    transform: scale(1.5) rotate(40deg);
+  50% {
+    transform: scale(1.5) rotate(25deg);
   }
 
   100% {
@@ -9,20 +13,22 @@
 }
 
 #star {
-  width: 5px;
-  height: 5px;
   right: 100px;
   top: 100px;
+
   position: absolute;
-  transition: 1s all;
+
+  transition: 2s all;
 
   &:before,
   &::after {
     content: "";
+
     position: absolute;
-    background: white;
-    width: 5px;
-    height: 8px;
+    width: $size;
+    height: $size + 3;
+
+    background: colors.$star;
   }
 
   &:before {
@@ -35,6 +41,6 @@
 
   &:not(:not(.starAnimation)) {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-    box-shadow: 0 0 30px 4px #fff;
+    box-shadow: 0 0 35px 8px colors.$star;
   }
 }
