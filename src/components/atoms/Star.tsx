@@ -12,11 +12,13 @@ const Star = ({ id }: StarType) => {
   setInterval(() => {
     const star = document.getElementById(`star${id}`);
 
-    star.classList.add(styles.starAnimation);
+    if (star) {
+      star.classList.add(styles.starAnimation);
 
-    setTimeout(() => {
-      star.classList.remove(styles.starAnimation);
-    }, 5000);
+      setTimeout(() => {
+        star.classList.remove(styles.starAnimation);
+      }, 5000);
+    }
   }, randomTime);
 
   const randomTop = Math.trunc(Math.random() * 100 + 1);

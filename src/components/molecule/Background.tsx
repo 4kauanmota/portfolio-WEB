@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./Background.module.scss";
 import Star from "../atoms/Star";
 import Comet from "../atoms/Comet";
 
 const Background = () => {
+  const [a, ab] = useState(true);
+
   const stars = [];
   const comets = [];
 
@@ -14,14 +16,18 @@ const Background = () => {
     comets.push(<Comet id={i} />);
   }
 
-  return (
-    <>
-      <div>
-        {stars.map((star) => star)}
-        {comets.map((comet) => comet)}
-      </div>
-    </>
-  );
+  if (a) {
+    return (
+      <>
+        <div>
+          {stars.map((star) => star)}
+          {comets.map((comet) => comet)}
+        </div>
+      </>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Background;
