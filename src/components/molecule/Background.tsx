@@ -2,15 +2,26 @@ import React from "react";
 
 import styles from "./Background.module.scss";
 import Star from "../atoms/Star";
+import Comet from "../atoms/Comet";
 
 const Background = () => {
   const stars = [];
-  const randomQuantityPlus = Math.trunc(Math.random() * 20 + 1);
-  console.log(randomQuantityPlus);
+  const comets = [];
 
-  for (let i = 0; i < 30 + randomQuantityPlus; i++) stars.push(<Star id={i} />);
+  const randomQuantity = Math.trunc(Math.random() * 20 + 31);
+  for (let i = 0; i < 30 + randomQuantity; i++) {
+    stars.push(<Star id={i} />);
+    comets.push(<Comet id={i} />);
+  }
 
-  return <>{stars.map((star) => star)}</>;
+  return (
+    <>
+      <div>
+        {stars.map((star) => star)}
+        {comets.map((comet) => comet)}
+      </div>
+    </>
+  );
 };
 
 export default Background;

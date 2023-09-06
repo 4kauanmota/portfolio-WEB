@@ -1,0 +1,58 @@
+@use "/public/theme/colors.scss";
+
+$size: 4px;
+$trail: 30px;
+
+$side: top;
+
+@keyframes cometAnimToLeft {
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes cometAnimToRight {
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.comet {
+  width: $size;
+  height: $size;
+  background-color: colors.$star;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+
+  transition: 2s all;
+
+  &:before {
+    content: "";
+
+    position: absolute;
+    width: $trail;
+    height: $size;
+
+    background-color: colors.$star;
+    opacity: 0.1;
+
+    border-radius: 50%;
+  }
+
+  &:not(:not(.cometAnimationLeft)) {
+    left: 100%;
+    animation: cometAnimToLeft 20s cubic-bezier(0.22, 0.68, 0, 1.71);
+  }
+
+  &:not(:not(.cometAnimationRight)) {
+    right: 100%;
+    animation: cometAnimToRight 20s cubic-bezier(0.22, 0.68, 0, 1.71);
+
+    &::before {
+      right: 0;
+    }
+  }
+}

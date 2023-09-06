@@ -1,6 +1,6 @@
 @use "/public/theme/colors.scss";
 
-$size: 5px;
+$size: 4px;
 
 @keyframes starAnim {
   50% {
@@ -15,7 +15,9 @@ $size: 5px;
 .star {
   position: absolute;
 
-  transition: 2s all;
+  transition: 1s all;
+
+  filter: blur(1px);
 
   &:before,
   &::after {
@@ -38,6 +40,6 @@ $size: 5px;
 
   &:not(:not(.starAnimation)) {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-    box-shadow: 0 0 35px 8px colors.$star;
+    box-shadow: 0 0 35px 7px colors.$star;
   }
 }

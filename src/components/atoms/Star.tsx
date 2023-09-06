@@ -26,7 +26,10 @@ const Star = ({ id }: StarType) => {
     <i
       id={`star${id}`}
       className={styles.star}
-      style={{ top: `${randomTop}%`, right: `${randomRight}%` }}
+      style={{
+        top: `${randomTop}%`,
+        right: `${randomRight}%`,
+      }}
     ></i>
   );
 };
