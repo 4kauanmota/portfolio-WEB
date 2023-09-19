@@ -17,7 +17,7 @@ function App() {
         innerSize={8}
         outerSize={35}
         innerScale={1}
-        outerScale={2}
+        outerScale={2.5}
         outerAlpha={0}
         innerStyle={{
           backgroundColor: "#fff",
@@ -25,7 +25,7 @@ function App() {
         outerStyle={{
           border: "3px solid #fff",
         }}
-        trailingSpeed={1}
+        trailingSpeed={10}
       />
 
       <Router>

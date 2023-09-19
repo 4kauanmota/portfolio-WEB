@@ -37,7 +37,7 @@ $side: top;
 
   &:not(:not(.cometAnimationLeft)) {
     left: 100%;
-    animation: cometAnimToLeft 20s cubic-bezier(0.22, 0.68, 0, 1.71);
+    animation: cometAnimToLeft 15s cubic-bezier(0.22, 0.68, 0, 1.71);
 
     &::before {
       left: 0;
@@ -52,7 +52,7 @@ $side: top;
 
   &:not(:not(.cometAnimationRight)) {
     right: 100%;
-    animation: cometAnimToRight 20s cubic-bezier(0.22, 0.68, 0, 1.71);
+    animation: cometAnimToRight 15s cubic-bezier(0.22, 0.68, 0, 1.71);
 
     &::before {
       background: linear-gradient(

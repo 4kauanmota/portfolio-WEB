@@ -17,6 +17,10 @@ const Comet = ({ id }: CometType) => {
       if (randomSide) comet.classList.add(styles.cometAnimationRight);
       else comet.classList.add(styles.cometAnimationLeft);
     }
+
+    setTimeout(() => {
+      comet.remove();
+    }, 15000);
   }, randomTime);
 
   const randomTop = Math.trunc(Math.random() * 100 + 1);
