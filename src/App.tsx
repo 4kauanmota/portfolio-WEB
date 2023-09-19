@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AnimatedCursor from "react-animated-cursor";
 
 import "./App.scss";
 import Space from "./pages/Space";
@@ -12,6 +13,21 @@ import Links from "./pages/Links";
 function App() {
   return (
     <>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={2}
+        outerAlpha={0}
+        innerStyle={{
+          backgroundColor: "#fff",
+        }}
+        outerStyle={{
+          border: "3px solid #fff",
+        }}
+        trailingSpeed={1}
+      />
+
       <Router>
         <main>
           <Routes>

@@ -2,11 +2,8 @@ import React from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
-import Planet from "../components/molecule/Planet";
+import Planet from "../components/atoms/Planet";
 import Background from "../components/molecule/Background";
-
-import Image from "../../public/img/blue-dust.png";
-import Image2 from "../../public/img/blue-dust2.png";
 
 const Space = () => {
   return (
@@ -21,7 +18,7 @@ const Space = () => {
           link=""
         />
 
-        <MouseParallax>
+        <MouseParallax enableOnTouchDevice isAbsolutelyPositioned>
           <Planet
             width={200}
             planet="https://cdn-icons-png.flaticon.com/512/6989/6989415.png"

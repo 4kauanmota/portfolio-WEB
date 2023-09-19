@@ -8,6 +8,8 @@ type StarType = {
 
 const Star = ({ id }: StarType) => {
   const randomTime = Math.trunc(Math.random() * 50000 + 1);
+  const randomTop = Math.trunc(Math.random() * 100 + 1);
+  const randomRight = Math.trunc(Math.random() * 100 + 1);
 
   setInterval(() => {
     const star = document.getElementById(`star${id}`);
@@ -20,9 +22,6 @@ const Star = ({ id }: StarType) => {
       }, 5000);
     }
   }, randomTime);
-
-  const randomTop = Math.trunc(Math.random() * 100 + 1);
-  const randomRight = Math.trunc(Math.random() * 100 + 1);
 
   return (
     <i

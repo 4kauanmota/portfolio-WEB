@@ -15,18 +15,28 @@ const Background = () => {
   const randomQuantity = Math.trunc(Math.random() * 20 + 31);
   for (let i = 0; i < 30 + randomQuantity; i++) {
     stars.push(<Star id={i} key={i} />);
+  }
+  for (let i = 0; i < 10; i++) {
     comets.push(<Comet id={i} key={i} />);
   }
 
   return (
     <>
       <div className={styles.container}>
-        <MouseParallax strength={0.01}>
+        <MouseParallax
+          strength={0.01}
+          enableOnTouchDevice
+          isAbsolutelyPositioned
+        >
           <img src={BlueDustTop} className={styles.blueDustTop} />
 
           <img src={BlueDustBottom} className={styles.blueDustBottom} />
 
-          <MouseParallax strength={0.015}>
+          <MouseParallax
+            strength={0.015}
+            enableOnTouchDevice
+            isAbsolutelyPositioned
+          >
             <div>
               {stars.map((star) => star)}
               {comets.map((comet) => comet)}

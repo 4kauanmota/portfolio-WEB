@@ -25,7 +25,9 @@ const Comet = ({ id }: CometType) => {
     <i
       id={`comet${id}`}
       className={styles.comet}
-      style={{ top: `${randomTop}%` }}
+      style={{
+        top: `${randomTop}%`,
+      }}
     ></i>
   );
 };
