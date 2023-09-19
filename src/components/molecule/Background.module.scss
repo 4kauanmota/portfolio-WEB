@@ -1,3 +1,34 @@
 .container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
 
+@mixin blueDust {
+  position: fixed;
+
+  width: 105%;
+  height: 190%;
+
+  object-fit: cover;
+}
+
+.blueDustTop {
+  @include blueDust;
+
+  opacity: 0.4;
+
+  top: -85%;
+  left: -2.5%;
+  transform: rotate(180deg);
+}
+
+.blueDustBottom {
+  @include blueDust;
+
+  opacity: 0.6;
+
+  left: -2.5%;
+  bottom: -85%;
+  transform: rotate(10deg);
 }

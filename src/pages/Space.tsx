@@ -5,12 +5,14 @@ import styles from "./Space.module.scss";
 import Planet from "../components/molecule/Planet";
 import Background from "../components/molecule/Background";
 
+import Image from "../../public/img/blue-dust.png";
+import Image2 from "../../public/img/blue-dust2.png";
+
 const Space = () => {
   return (
     <>
       <section id={styles.space}>
         <Background />
-
         <Planet
           height={"100%"}
           planet="https://cdn.pixabay.com/photo/2020/06/09/08/16/sun-5277493_1280.png"

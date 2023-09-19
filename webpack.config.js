@@ -19,7 +19,7 @@ module.exports = {
     liveReload: true,
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".css", ".scss"],
+    extensions: [".tsx", ".ts", ".js", ".css", ".scss", "png"],
   },
   module: {
     rules: [
@@ -41,6 +41,10 @@ module.exports = {
           { loader: "css-loader", options: { modules: true } },
           { loader: "sass-loader" },
         ],
+      },
+      {
+        test: /\.(png|svg|jp(e*)g|gif)$/i,
+        use: [{ loader: "file-loader" }],
       },
     ],
   },
