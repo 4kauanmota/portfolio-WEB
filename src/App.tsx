@@ -25,7 +25,6 @@ function App() {
         outerStyle={{
           border: "3px solid #fff",
         }}
-        trailingSpeed={10}
       />
 
       <Router>

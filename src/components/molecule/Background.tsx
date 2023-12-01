@@ -1,12 +1,10 @@
 import React from "react";
-
-import styles from "./Background.module.scss";
-import Star from "../atoms/Star";
-import Comet from "../atoms/Comet";
 import { MouseParallax } from "react-just-parallax";
 
-import BlueDustTop from "../../../public/assets/img/blue-dust-top.png";
-import BlueDustBottom from "../../../public/assets/img/blue-dust-bottom.png";
+import styles from "./Background.module.scss";
+
+import Star from "../atoms/Star";
+import Comet from "../atoms/Comet";
 
 const Background = () => {
   const stars = [];
@@ -28,10 +26,6 @@ const Background = () => {
           enableOnTouchDevice
           isAbsolutelyPositioned
         >
-          <img src={BlueDustTop} className={styles.blueDustTop} />
-
-          <img src={BlueDustBottom} className={styles.blueDustBottom} />
-
           <MouseParallax
             strength={0.015}
             enableOnTouchDevice
