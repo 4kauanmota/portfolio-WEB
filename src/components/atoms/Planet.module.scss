@@ -17,3 +17,9 @@ figure.planet {
     }
   }
 }
+
+@media (max-width: 700px) {
+  figure.planet {
+    position: static;
+  }
+}

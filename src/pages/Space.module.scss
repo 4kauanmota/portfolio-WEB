@@ -10,3 +10,15 @@
 
   overflow: hidden;
 }
+
+@media (max-width: 700px) {
+  #space {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    overflow: auto;
+  }
+}
