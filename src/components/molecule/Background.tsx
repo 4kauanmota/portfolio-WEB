@@ -5,6 +5,7 @@ import styles from "./Background.module.scss";
 
 import Star from "../atoms/Star";
 import Comet from "../atoms/Comet";
+import Constellation from "../atoms/Constellation";
 
 const Background = () => {
   const stars = [];
@@ -35,6 +36,16 @@ const Background = () => {
               {stars.map((star) => star)}
               {comets.map((comet) => comet)}
             </div>
+
+            <MouseParallax
+              strength={0.02}
+              enableOnTouchDevice
+              isAbsolutelyPositioned
+            >
+              {/* <div className={styles.constellationPosition}>
+                <Constellation />
+              </div> */}
+            </MouseParallax>
           </MouseParallax>
         </MouseParallax>
       </div>

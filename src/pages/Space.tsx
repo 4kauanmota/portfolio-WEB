@@ -26,7 +26,11 @@ const Space = () => {
             />
           </div>
 
-          <MouseParallax enableOnTouchDevice isAbsolutelyPositioned>
+          <MouseParallax
+            enableOnTouchDevice
+            isAbsolutelyPositioned
+            strength={0.1}
+          >
             <Planet
               width={200}
               planet="https://cdn-icons-png.flaticon.com/512/6989/6989415.png"
