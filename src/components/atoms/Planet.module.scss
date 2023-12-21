@@ -1,3 +1,5 @@
+@use "/public/theme/colors.scss";
+
 figure.planet {
   position: absolute;
 
@@ -19,6 +21,11 @@ figure.planet {
 
   figcaption {
     display: none;
+
+    color: colors.$text-primary;
+    background-color: colors.$background-secondary;
+    padding: 1rem;
+    border-radius: 8px;
   }
 
   &:hover figcaption {

@@ -17,7 +17,7 @@ const Space = () => {
           strength={0.03}
         >
           <div className="hide">
-            <Planet
+            <Planet // Sun
               height={"100%"}
               planet="https://cdn.pixabay.com/photo/2020/06/09/08/16/sun-5277493_1280.png"
               description="Sun"
@@ -31,7 +31,7 @@ const Space = () => {
             isAbsolutelyPositioned
             strength={0.1}
           >
-            <Planet
+            <Planet // Venus
               width={200}
               planet="https://cdn-icons-png.flaticon.com/512/6989/6989415.png"
               description="Venus"
@@ -39,7 +39,7 @@ const Space = () => {
               link="contact"
             />
 
-            <Planet
+            <Planet // Earth
               width={200}
               planet="https://cdn-icons-png.flaticon.com/512/3594/3594282.png"
               description="About me"
@@ -47,26 +47,26 @@ const Space = () => {
               link="aboutMe"
             />
 
-            <Planet
+            <Planet // Mars
               width={200}
               planet="https://cdn.pixabay.com/photo/2016/04/01/08/43/cartoon-1298905_1280.png"
-              description="Mars"
+              description="Career"
               position={{ left: "50%", bottom: "50%" }}
-              link="links"
+              link="career"
             />
 
-            <Planet
+            <Planet // Saturn
               width={200}
               planet="https://png.pngtree.com/png-clipart/20230326/original/pngtree-saturn-planet-vector-png-image_9004529.png"
-              description="Saturn"
+              description="Stacks"
               position={{ left: "70%", top: "20%" }}
               link="stacks"
             />
 
-            <Planet
+            <Planet // Neptune
               width={200}
               planet="https://static.vecteezy.com/system/resources/previews/018/887/916/original/cartoon-neptune-icon-png.png"
-              description="Neptune"
+              description="Projects"
               position={{ left: "85%", bottom: "20%" }}
               link="projects"
             />
