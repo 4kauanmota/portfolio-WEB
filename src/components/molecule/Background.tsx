@@ -10,13 +10,17 @@ const Background = () => {
   const stars = [];
   const comets = [];
 
-  const randomQuantity = Math.trunc(Math.random() * 20 + 31);
-  for (let i = 0; i < 30 + randomQuantity; i++) {
+  const randomQuantityStars = Math.trunc(Math.random() * 20 + 61);
+  for (let i = 0; i < randomQuantityStars; i++) {
     stars.push(<Star id={i} key={i} />);
   }
-  for (let i = 0; i < 10; i++) {
+  console.log(`Quantity of stars: ${randomQuantityStars}`);
+
+  const randomQuantityComets = Math.trunc(Math.random() * 15 + 15);
+  for (let i = 0; i < randomQuantityComets; i++) {
     comets.push(<Comet id={i} key={i} />);
   }
+  console.log(`Quantity of comets: ${randomQuantityComets}`);
 
   return (
     <>

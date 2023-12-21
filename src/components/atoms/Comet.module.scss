@@ -3,8 +3,6 @@
 $size: 1px;
 $trail: 100px;
 
-$side: top;
-
 @keyframes cometAnimToLeft {
   to {
     left: 0;
@@ -19,47 +17,55 @@ $side: top;
   }
 }
 
-.comet {
-  border-radius: 50%;
+.cometArea {
   position: absolute;
+  width: 100%;
+  height: $size;
 
-  transition: 2s all;
-
-  &:before {
-    content: "";
-
-    position: absolute;
+  .comet {
     width: $trail;
     height: $size;
-
     border-radius: 50%;
-  }
+    position: absolute;
 
-  &:not(:not(.cometAnimationLeft)) {
-    left: 100%;
-    animation: cometAnimToLeft 15s cubic-bezier(0.22, 0.68, 0, 1.71);
+    transition: 2s all;
 
-    &::before {
-      left: 0;
+    &:before {
+      content: "";
 
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 0.4) 100%
-      );
+      position: absolute;
+      width: $trail;
+      height: $size;
+
+      border-radius: 50%;
     }
-  }
 
-  &:not(:not(.cometAnimationRight)) {
-    right: 100%;
-    animation: cometAnimToRight 15s cubic-bezier(0.22, 0.68, 0, 1.71);
+    &:not(:not(.cometAnimationLeft)) {
+      left: 100%;
+      animation: cometAnimToLeft 12s cubic-bezier(0.22, 0.68, 0, 1.71);
 
-    &::before {
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(255, 255, 255, 0.4) 100%
-      );
+      &::before {
+        left: 0;
+
+        background: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
+    }
+
+    &:not(:not(.cometAnimationRight)) {
+      right: 100%;
+      animation: cometAnimToRight 12s cubic-bezier(0.22, 0.68, 0, 1.71);
+
+      &::before {
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
     }
   }
 }

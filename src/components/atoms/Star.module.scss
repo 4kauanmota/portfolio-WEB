@@ -41,6 +41,6 @@ $star-color: #ffffff;
 
   &:not(:not(.starAnimation)) {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-    box-shadow: 0 0 35px 6px $star-color;
+    box-shadow: 0 0 35px 5.5px $star-color;
   }
 }
