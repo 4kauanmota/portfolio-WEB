@@ -1,6 +1,6 @@
 @use "/public/theme/colors.scss";
 
-$star-size: 4px;
+$star-size: random(4) * 1px;
 $star-color: #ffffff;
 
 @keyframes starAnim {
@@ -25,8 +25,8 @@ $star-color: #ffffff;
     content: "";
 
     position: absolute;
-    width: $star-size;
-    height: $star-size + 3;
+    width: 100%;
+    height: 100% + 3;
 
     background: $star-color;
   }
@@ -41,6 +41,6 @@ $star-color: #ffffff;
 
   &:not(:not(.starAnimation)) {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-    box-shadow: 0 0 35px 7px $star-color;
+    box-shadow: 0 0 35px 6px $star-color;
   }
 }

@@ -6,7 +6,10 @@ type StarType = {
   id: number;
 };
 
+export const randomSize = Math.floor(Math.random() * (1 - 4 + 1));
+
 const Star = ({ id }: StarType) => {
+  const randomSize = Math.trunc(Math.random() * 4 + 1);
   const randomTime = Math.trunc(Math.random() * 50000 + 1);
   const randomTop = Math.trunc(Math.random() * 100 + 1);
   const randomRight = Math.trunc(Math.random() * 100 + 1);
@@ -17,9 +20,8 @@ const Star = ({ id }: StarType) => {
     if (star) {
       star.classList.add(styles.starAnimation);
 
-      setTimeout(() => {
-        star.classList.remove(styles.starAnimation);
-      }, 5000);
+      star.style.width = `${randomSize}px`;
+      star.style.height = `${randomSize}px`;
     }
   }, randomTime);
 

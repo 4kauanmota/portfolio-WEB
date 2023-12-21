@@ -19,7 +19,7 @@ module.exports = {
     liveReload: true,
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".css", ".scss", "png"],
+    extensions: [".tsx", ".ts", ".js", ".css", ".scss", ".png"],
   },
   module: {
     rules: [
