@@ -42,7 +42,7 @@ const Space = () => {
             <Planet
               width={200}
               planet="https://cdn-icons-png.flaticon.com/512/3594/3594282.png"
-              description="Earth"
+              description="About me"
               position={{ left: "35%", bottom: "20%" }}
               link="aboutMe"
             />

@@ -27,6 +27,7 @@ const Planet = ({
         className={styles.planet}
       >
         <img src={planet} alt={description} />
+        <figcaption>{description}</figcaption>
       </figure>
     </Link>
   );

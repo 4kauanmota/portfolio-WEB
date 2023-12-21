@@ -37,15 +37,15 @@ const Background = () => {
               {comets.map((comet) => comet)}
             </div>
 
-            <MouseParallax
+            {/* <MouseParallax
               strength={0.02}
               enableOnTouchDevice
               isAbsolutelyPositioned
             >
-              {/* <div className={styles.constellationPosition}>
+              <div className={styles.constellationPosition}>
                 <Constellation />
-              </div> */}
-            </MouseParallax>
+              </div>
+            </MouseParallax> */}
           </MouseParallax>
         </MouseParallax>
       </div>
