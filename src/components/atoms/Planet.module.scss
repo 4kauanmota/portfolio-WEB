@@ -37,8 +37,6 @@ figure.planet {
 
   transition: 0.3s all;
 
-  // animation: translationAnim 20s linear infinite;
-
   &:hover {
     transform: scale(1.05);
   }
@@ -56,16 +54,34 @@ figure.planet {
 
   figcaption {
     display: none;
+    width: 100%;
 
     color: colors.$text-primary;
+
     background-color: colors.$background-secondary;
-    padding: 1rem;
+    padding: 0.2rem 0;
     border-radius: 8px;
+
+    .title {
+      font-weight: bold;
+      text-transform: uppercase;
+
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
+    }
   }
 
   &:hover figcaption {
-    display: inline;
     position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
+    top: 0;
+    left: 0;
   }
 }
 

@@ -7,7 +7,8 @@ type PlanetType = {
   width?: number | string;
   height?: number | string;
   planet: string;
-  description: string;
+  description?: string;
+  colors?: string[];
   position?: object;
   rotation?: number;
   translation?: number;
@@ -19,12 +20,15 @@ const Planet = ({
   height,
   planet,
   description,
+  colors,
   position,
   rotation,
   translation,
   link,
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [planetTitle, planetDescription] = description.split("-");
+  const planetColors = [{ Venus: "#ff0000" }, { Earth: "#00FF00" }];
 
   const translationAnimationStyles = isHovered
     ? {
@@ -37,7 +41,6 @@ const Planet = ({
         animation: `${styles.translationAnim} ${
           translation ?? 0
         }s ease-in-out infinite`,
-        animationPlayState: "running",
       };
 
   return (
@@ -63,10 +66,22 @@ const Planet = ({
             animation: `${styles.rotationAnim} ${
               rotation ?? 0
             }s linear infinite`,
-            animationPlayState: "running",
           }}
         />
-        <figcaption>{description}</figcaption>
+        <figcaption>
+          <span
+            className={styles.title}
+            style={{ color: colors ? colors[0] : null }}
+          >
+            {planetTitle}
+          </span>
+          <span
+            className={styles.description}
+            style={{ color: colors ? colors[1] : null }}
+          >
+            {planetDescription}
+          </span>
+        </figcaption>
       </figure>
     </Link>
   );
