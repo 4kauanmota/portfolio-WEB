@@ -1,5 +1,33 @@
 @use "/public/theme/colors.scss";
 
+@keyframes rotationAnim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translationAnim {
+  0% {
+    bottom: 30%;
+  }
+
+  25% {
+    bottom: 10%;
+  }
+
+  75% {
+    bottom: 65%;
+  }
+
+  100% {
+    bottom: 30%;
+  }
+}
+
 figure.planet {
   position: absolute;
 
@@ -7,15 +35,22 @@ figure.planet {
 
   border-radius: 50%;
 
+  transition: 0.3s all;
+
+  // animation: translationAnim 20s linear infinite;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
 
-    transition: 0.3s all;
+    animation-play-state: paused;
 
     &:hover {
-      transform: scale(1.05);
+      animation-play-state: running;
     }
   }
 

@@ -23,7 +23,7 @@ const Comet = ({ id }: CometType) => {
 
     setTimeout(() => {
       comet.remove();
-    }, 15000);
+    }, 12000);
   }, randomTime);
 
   const randomTop = Math.trunc(Math.random() * 100 + 1);
