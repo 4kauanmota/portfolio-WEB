@@ -17,12 +17,13 @@ const Comet = ({ id }: CometType) => {
     if (comet) {
       if (randomSide) comet.classList.add(styles.cometAnimationRight);
       else comet.classList.add(styles.cometAnimationLeft);
+      comet.parentElement.style.transform = `rotate(${randomRotate}deg)`;
     }
 
-    comet.parentElement.style.transform = `rotate(${randomRotate}deg)`;
-
     setTimeout(() => {
-      comet.remove();
+      if (comet) {
+        comet.remove();
+      }
     }, 12000);
   }, randomTime);
 
