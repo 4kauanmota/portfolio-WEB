@@ -8,7 +8,7 @@ import Background from "../components/molecule/Background";
 const Space = () => {
   return (
     <>
-      <section id={styles.space}>
+      <div id={styles.space}>
         <Background />
 
         <MouseParallax
@@ -35,7 +35,7 @@ const Space = () => {
             <Planet // Venus
               width={210}
               planet="https://cdn-icons-png.flaticon.com/512/6989/6989415.png"
-              description="Contact - Venus"
+              description="Venus - Contact"
               colors={["yellow", "orange"]}
               position={{ left: "15%", bottom: "50%" }}
               rotation={100} // 5.832
@@ -88,7 +88,7 @@ const Space = () => {
             />
           </MouseParallax>
         </MouseParallax>
-      </section>
+      </div>
     </>
   );
 };

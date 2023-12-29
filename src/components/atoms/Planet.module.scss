@@ -1,5 +1,11 @@
 @use "/public/theme/colors.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap");
+
+$fonts-main: "Audiowide", sans-serif;
+$fonts-secondary: "Oxanium", sans-serif;
+
 @keyframes rotationAnim {
   from {
     transform: rotate(0deg);
@@ -53,16 +59,26 @@ figure.planet {
   }
 
   figcaption {
-    display: none;
+    opacity: 0;
     width: 100%;
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    top: 0;
+    left: 0;
 
     color: colors.$text-primary;
 
-    background-color: colors.$background-secondary;
+    background-color: #ccc;
     padding: 0.2rem 0;
     border-radius: 8px;
 
+    transition: 0.2s all ease-in-out;
+
     .title {
+      font-family: $fonts-main;
       font-weight: bold;
       text-transform: uppercase;
 
@@ -70,18 +86,14 @@ figure.planet {
     }
 
     .description {
+      font-family: $fonts-secondary;
+
       text-align: center;
     }
   }
 
   &:hover figcaption {
-    position: fixed;
-
-    display: flex;
-    flex-direction: column;
-
-    top: 0;
-    left: 0;
+    opacity: 1;
   }
 }
 

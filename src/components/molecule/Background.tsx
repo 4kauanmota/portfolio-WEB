@@ -25,8 +25,6 @@ const Background = () => {
     }
     setComets(cometsArray);
     console.log(`Quantity of comets: ${randomQuantityComets}`);
-
-    return;
   }, []);
 
   if (comets && stars) {

@@ -1,7 +1,15 @@
 import React from "react";
 
+import styles from "./Stacks.module.scss";
+
 const Stack = () => {
-  return <div>Stack</div>;
+  return (
+    <>
+      <section id={styles.saturn}>
+        <div>Stack</div>
+      </section>
+    </>
+  );
 };
 
 export default Stack;

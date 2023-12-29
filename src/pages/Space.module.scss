@@ -1,12 +1,14 @@
 @use "/public/theme/colors.scss";
 
+$backgrounds-primary: #000000;
+$backgrounds-secondary: #cccccc;
+
 #space {
   width: 100%;
   height: 100%;
+  background-color: $backgrounds-primary;
 
   position: relative;
-
-  background-color: colors.$background-primary;
 
   overflow: hidden;
 }
