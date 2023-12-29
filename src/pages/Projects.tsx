@@ -4,11 +4,9 @@ import styles from "./Projects.module.scss";
 
 const Projects = () => {
   return (
-    <>
-      <section id={styles.neptune}>
-        <div>Projects</div>
-      </section>
-    </>
+    <section id={styles.neptune}>
+      <div>Projects</div>
+    </section>
   );
 };
 

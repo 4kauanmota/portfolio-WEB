@@ -4,11 +4,9 @@ import styles from "./Career.module.scss";
 
 const Career = () => {
   return (
-    <>
-      <section id={styles.mars}>
-        <div>Career</div>
-      </section>
-    </>
+    <section id={styles.mars}>
+      <div>Career</div>
+    </section>
   );
 };
 

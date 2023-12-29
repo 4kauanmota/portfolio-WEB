@@ -28,7 +28,6 @@ const Planet = ({
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
   const [planetTitle, planetDescription] = description.split("-");
-  const planetColors = [{ Venus: "#ff0000" }, { Earth: "#00FF00" }];
 
   const translationAnimationStyles = isHovered
     ? {

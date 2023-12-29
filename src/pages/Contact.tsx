@@ -4,11 +4,9 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <>
-      <section id={styles.venus}>
-        <div>Contact</div>
-      </section>
-    </>
+    <section id={styles.venus}>
+      <div>Contact</div>
+    </section>
   );
 };
 

@@ -1,16 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 
 import "./App.scss";
-import Space from "./pages/Space";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
-import Stacks from "./pages/Stacks";
-import AboutMe from "./pages/AboutMe";
-import Career from "./pages/Career";
+import "./theme/global.scss";
+import Pages from "./Pages";
 
-function App() {
+const App = () => {
   return (
     <>
       <AnimatedCursor
@@ -27,20 +22,9 @@ function App() {
         }}
       />
 
-      <Router>
-        <Routes>
-          <Route path="/">
-            <Route index={true} element={<Space />} />
-            <Route index={false} path="contact" element={<Contact />} />
-            <Route index={false} path="aboutMe" element={<AboutMe />} />
-            <Route index={false} path="career" element={<Career />} />
-            <Route index={false} path="stacks" element={<Stacks />} />
-            <Route index={false} path="projects" element={<Projects />} />
-          </Route>
-        </Routes>
-      </Router>
+      <Pages />
     </>
   );
-}
+};
 
 export default App;
