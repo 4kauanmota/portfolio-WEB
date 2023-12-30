@@ -12,7 +12,7 @@ type PlanetType = {
   position?: object;
   rotation?: number;
   translation?: number;
-  link: string;
+  link?: string;
 };
 
 const Planet = ({
@@ -67,20 +67,22 @@ const Planet = ({
             }s linear infinite`,
           }}
         />
-        <figcaption>
-          <span
-            className={styles.title}
-            style={{ color: colors ? colors[0] : null }}
-          >
-            {planetTitle}
-          </span>
-          <span
-            className={styles.description}
-            style={{ color: colors ? colors[1] : null }}
-          >
-            {planetDescription}
-          </span>
-        </figcaption>
+        {link ? (
+          <figcaption>
+            <span
+              className={styles.title}
+              style={{ color: colors ? colors[0] : null }}
+            >
+              {planetTitle}
+            </span>
+            <span
+              className={styles.description}
+              style={{ color: colors ? colors[1] : null }}
+            >
+              {planetDescription}
+            </span>
+          </figcaption>
+        ) : null}
       </figure>
     </Link>
   );

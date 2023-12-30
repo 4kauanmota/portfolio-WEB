@@ -18,7 +18,6 @@ const Space = () => {
             description="Sun"
             position={{ top: 0, left: "-40%" }}
             rotation={300} // 648
-            link=""
           />
         </div>
 
