@@ -16,7 +16,7 @@
     "react-animated-cursor": "^2.8.1",
     "react-dom": "^18.2.0",
     "react-just-parallax": "^3.1.16",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
