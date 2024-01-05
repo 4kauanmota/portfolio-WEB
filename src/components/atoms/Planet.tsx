@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Planet.module.scss";
@@ -6,25 +6,29 @@ import styles from "./Planet.module.scss";
 type PlanetType = {
   width?: number | string;
   height?: number | string;
-  planet: string;
+  planet: any;
+  ring?: any;
   description?: string;
   colors?: string[];
   position?: object;
   rotation?: number;
   translation?: number;
   link?: string;
+  style?: CSSProperties;
 };
 
 const Planet = ({
   width,
   height,
   planet,
+  ring,
   description,
   colors,
   position,
   rotation,
   translation,
   link,
+  style,
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
   const [planetTitle, planetDescription] = description.split("-");
@@ -50,7 +54,7 @@ const Planet = ({
     >
       <figure
         style={{
-          maxWidth: width,
+          width: width,
           height: height,
           ...position,
           ...translationAnimationStyles,
@@ -62,11 +66,17 @@ const Planet = ({
           src={planet}
           alt={description}
           style={{
-            animation: `${styles.rotationAnim} ${
-              rotation ?? 0
-            }s linear infinite`,
+            ...{
+              animation: `${styles.rotationAnim} ${
+                rotation ?? 0
+              }s linear infinite`,
+            },
+            ...style,
           }}
         />
+        {ring ? (
+          <img src={ring} alt={description} className={styles.ring} />
+        ) : null}
         {link ? (
           <figcaption>
             <span

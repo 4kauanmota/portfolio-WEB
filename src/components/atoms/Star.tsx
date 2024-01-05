@@ -6,15 +6,13 @@ type StarType = {
   id: number;
 };
 
-export const randomSize = Math.floor(Math.random() * (1 - 4 + 1));
-
 const Star = ({ id }: StarType) => {
-  const randomSize = Math.trunc(Math.random() * 4 + 1);
+  const randomSize = Math.trunc(Math.random() * 3 + 1);
   const randomTime = Math.trunc(Math.random() * 50000 + 1);
   const randomTop = Math.trunc(Math.random() * 100 + 1);
   const randomRight = Math.trunc(Math.random() * 100 + 1);
 
-  setInterval(() => {
+  setTimeout(() => {
     const star = document.getElementById(`star${id}`);
 
     if (star) {

@@ -11,6 +11,10 @@ $backgrounds-secondary: #cccccc;
   position: relative;
 
   overflow: hidden;
+
+  #saturn_ring {
+    transform: translateY(4px);
+  }
 }
 
 @media (max-width: 700px) {
