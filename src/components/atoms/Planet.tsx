@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from "react";
+import React, { CSSProperties, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Planet.module.scss";
@@ -32,6 +32,27 @@ const Planet = ({
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
   const [planetTitle, planetDescription] = description.split("-");
+  const planetCaption = useRef(null);
+
+  const captionPosition = (event: React.MouseEvent<HTMLDivElement>) => {
+    const captionPosition = planetCaption.current;
+    console.log(captionPosition);
+
+    const spaceAbove = event.currentTarget.getBoundingClientRect().top;
+    const spaceBelow =
+      window.innerHeight - spaceAbove - event.currentTarget.clientHeight;
+
+    console.log(spaceAbove);
+    console.log(spaceBelow);
+
+    if (spaceAbove < spaceBelow) {
+      captionPosition.style.top = "auto";
+      captionPosition.style.bottom = 0;
+    } else {
+      captionPosition.style.top = 0;
+      captionPosition.style.bottom = "auto";
+    }
+  };
 
   const translationAnimationStyles = isHovered
     ? {
@@ -61,6 +82,7 @@ const Planet = ({
         }}
         className={styles.planet}
         id={link}
+        onMouseOver={captionPosition}
       >
         <img
           src={planet}
@@ -78,7 +100,7 @@ const Planet = ({
           <img src={ring} alt={description} className={styles.ring} />
         ) : null}
         {link ? (
-          <figcaption>
+          <figcaption ref={planetCaption}>
             <span
               className={styles.title}
               style={{ color: colors ? colors[0] : null }}
