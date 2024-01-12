@@ -3,7 +3,7 @@ import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
 import Planet from "../components/atoms/Planet";
-import Background from "../components/molecule/Background";
+import Background from "../components/molecules/Background";
 
 import spaceship from "../../public/assets/img/spaceship.png";
 import hud from "../../public/assets/img/hud.png";

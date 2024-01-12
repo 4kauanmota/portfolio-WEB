@@ -36,20 +36,16 @@ const Planet = ({
 
   const captionPosition = (event: React.MouseEvent<HTMLDivElement>) => {
     const captionPosition = planetCaption.current;
-    console.log(captionPosition);
 
     const spaceAbove = event.currentTarget.getBoundingClientRect().top;
     const spaceBelow =
       window.innerHeight - spaceAbove - event.currentTarget.clientHeight;
 
-    console.log(spaceAbove);
-    console.log(spaceBelow);
-
     if (spaceAbove < spaceBelow) {
       captionPosition.style.top = "auto";
-      captionPosition.style.bottom = 0;
+      captionPosition.style.bottom = "-25%";
     } else {
-      captionPosition.style.top = 0;
+      captionPosition.style.top = "-25%";
       captionPosition.style.bottom = "auto";
     }
   };

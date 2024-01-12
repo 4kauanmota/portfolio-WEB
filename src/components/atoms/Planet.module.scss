@@ -7,6 +7,8 @@
 $fonts-main: "Audiowide", sans-serif;
 $fonts-secondary: "Oxanium", sans-serif;
 
+$selection-border: #ffffff;
+
 @keyframes rotationAnim {
   from {
     transform: rotate(0deg);
@@ -46,6 +48,14 @@ figure.planet {
 
   &:hover {
     transform: scale(1.05);
+
+    border: solid 2px $selection-border;
+    border-radius: 25%;
+    padding: 0.25rem;
+  }
+
+  &:hover figcaption {
+    opacity: 1;
   }
 
   img:not(.ring) {
@@ -68,6 +78,7 @@ figure.planet {
   }
 
   figcaption {
+    pointer-events: none;
     opacity: 0;
     width: 100%;
 
@@ -77,10 +88,6 @@ figure.planet {
 
     color: colors.$text-primary;
 
-    background-color: #ccc;
-    padding: 0.2rem 0;
-    border-radius: 8px;
-
     transition: 0.2s all ease-in-out;
 
     .title {
@@ -89,6 +96,18 @@ figure.planet {
       text-transform: uppercase;
 
       text-align: center;
+
+      &::after {
+        content: "";
+
+        display: block;
+        width: 50px;
+        height: 2px;
+
+        margin: 4px auto;
+
+        background-color: #ffffff;
+      }
     }
 
     .description {
@@ -96,10 +115,6 @@ figure.planet {
 
       text-align: center;
     }
-  }
-
-  &:hover figcaption {
-    opacity: 1;
   }
 }
 
