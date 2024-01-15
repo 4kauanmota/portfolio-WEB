@@ -21,19 +21,15 @@ $selection-border: #ffffff;
 
 @keyframes translationAnim {
   0% {
-    bottom: 30%;
+    bottom: 12%;
   }
 
-  25% {
-    bottom: 10%;
-  }
-
-  75% {
-    bottom: 65%;
+  50% {
+    bottom: 60%;
   }
 
   100% {
-    bottom: 30%;
+    bottom: 12%;
   }
 }
 

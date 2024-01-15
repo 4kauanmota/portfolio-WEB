@@ -37,16 +37,18 @@ const Planet = ({
   const captionPosition = (event: React.MouseEvent<HTMLDivElement>) => {
     const captionPosition = planetCaption.current;
 
-    const spaceAbove = event.currentTarget.getBoundingClientRect().top;
-    const spaceBelow =
-      window.innerHeight - spaceAbove - event.currentTarget.clientHeight;
+    if (captionPosition) {
+      const spaceAbove = event.currentTarget.getBoundingClientRect().top;
+      const spaceBelow =
+        window.innerHeight - spaceAbove - event.currentTarget.clientHeight;
 
-    if (spaceAbove < spaceBelow) {
-      captionPosition.style.top = "auto";
-      captionPosition.style.bottom = "-25%";
-    } else {
-      captionPosition.style.top = "-25%";
-      captionPosition.style.bottom = "auto";
+      if (spaceAbove < spaceBelow) {
+        captionPosition.style.top = "auto";
+        captionPosition.style.bottom = "-25%";
+      } else {
+        captionPosition.style.top = "-25%";
+        captionPosition.style.bottom = "auto";
+      }
     }
   };
 
@@ -54,13 +56,13 @@ const Planet = ({
     ? {
         animation: `${styles.translationAnim} ${
           translation ?? 0
-        }s ease-in-out infinite`,
+        }s linear infinite`,
         animationPlayState: "paused",
       }
     : {
         animation: `${styles.translationAnim} ${
           translation ?? 0
-        }s ease-in-out infinite`,
+        }s linear infinite`,
       };
 
   return (
