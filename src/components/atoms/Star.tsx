@@ -35,7 +35,7 @@ const Star = ({ id }: StarType) => {
         top: `${randomTop}%`,
         right: `${randomRight}%`,
       }}
-    ></i>
+    />
   );
 };
 

@@ -94,9 +94,11 @@ const Planet = ({
             ...style,
           }}
         />
+
         {ring ? (
           <img src={ring} alt={description} className={styles.ring} />
         ) : null}
+
         {link ? (
           <figcaption ref={planetCaption}>
             <span
@@ -105,6 +107,7 @@ const Planet = ({
             >
               {planetTitle}
             </span>
+
             <span
               className={styles.description}
               style={{ color: colors ? colors[1] : null }}

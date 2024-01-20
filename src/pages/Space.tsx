@@ -2,44 +2,33 @@ import React from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
-import Planet from "../components/atoms/Planet";
-import Background from "../components/molecules/Background";
 
-import spaceship from "../../public/assets/img/spaceship.png";
-import hud from "../../public/assets/img/hud.png";
-import sun from "../../public/assets/img/sun.png";
-import venus from "../../public/assets/img/venus.png";
-import earth from "../../public/assets/img/earth.png";
-import mars from "../../public/assets/img/mars.png";
-import saturn from "../../public/assets/img/saturn.png";
-import saturn_ring from "../../public/assets/img/saturn_ring.png";
-import neptune from "../../public/assets/img/neptune.png";
+import Spaceship from "../components/atoms/Spaceship";
+import SpaceBackground from "../components/molecules/SpaceBackground";
+import Planet from "../components/atoms/Planet";
+
+import sun from "../../public/assets/img/planets/sun.png";
+import venus from "../../public/assets/img/planets/venus.png";
+import earth from "../../public/assets/img/planets/earth.png";
+import mars from "../../public/assets/img/planets/mars.png";
+import saturn from "../../public/assets/img/planets/saturn.png";
+import saturn_ring from "../../public/assets/img/planets/saturn_ring.png";
+import neptune from "../../public/assets/img/planets/neptune.png";
 
 const Space = () => {
   return (
     <>
-      <div id={styles.spaceship}>
-        <img
-          src={spaceship}
-          alt="Structure of the front of the ship"
-          className={styles.hud}
-        />
-        <img
-          src={hud}
-          alt="Hud of the front of the ship"
-          className={styles.hud}
-        />
-      </div>
+      <Spaceship />
 
       <div id={styles.space}>
-        <Background />
+        <SpaceBackground />
 
         <MouseParallax
           enableOnTouchDevice
           isAbsolutelyPositioned
           strength={0.03}
         >
-          <div className="hideOnPhone">
+          <span className="hideOnPhone">
             <Planet // Sun
               height={"103%"}
               planet={sun}
@@ -52,7 +41,7 @@ const Space = () => {
                   "0 0 30px 10px #FFC546, 0 0 60px 10px orange, 0 0 80px 10px red",
               }}
             />
-          </div>
+          </span>
 
           <MouseParallax
             enableOnTouchDevice

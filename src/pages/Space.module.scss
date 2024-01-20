@@ -3,22 +3,6 @@
 $backgrounds-primary: #000000;
 $backgrounds-secondary: #cccccc;
 
-#spaceship {
-  .hud {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    z-index: 1;
-
-    pointer-events: none;
-  }
-
-  & img:nth-last-child(1) {
-    filter: blur(1px);
-  }
-}
-
 #space {
   width: 100%;
   height: 100%;

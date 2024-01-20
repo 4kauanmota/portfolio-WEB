@@ -7,6 +7,8 @@ type CometType = {
 };
 
 const Comet = ({ id }: CometType) => {
+  const randomTop = Math.trunc(Math.random() * 100 + 1);
+
   const randomTime = Math.trunc(Math.random() * 1000000 + 1);
   const randomSide = Math.floor(Math.random() * 2);
   const randomRotate = Math.trunc(Math.random() * 10 + 1);
@@ -17,6 +19,7 @@ const Comet = ({ id }: CometType) => {
     if (comet) {
       if (randomSide) comet.classList.add(styles.cometAnimationRight);
       else comet.classList.add(styles.cometAnimationLeft);
+
       comet.parentElement.style.transform = `rotate(${randomRotate}deg)`;
     }
 
@@ -27,8 +30,6 @@ const Comet = ({ id }: CometType) => {
     }, 12000);
   }, randomTime);
 
-  const randomTop = Math.trunc(Math.random() * 100 + 1);
-
   return (
     <div
       className={styles.cometArea}
@@ -36,7 +37,7 @@ const Comet = ({ id }: CometType) => {
         top: `${randomTop}%`,
       }}
     >
-      <i id={`comet${id}`} className={styles.comet}></i>
+      <i id={`comet${id}`} className={styles.comet} />
     </div>
   );
 };

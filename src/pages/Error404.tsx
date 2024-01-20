@@ -118,6 +118,7 @@ const Error404 = () => {
     <section ref={errorPage} id={styles.blackhole}>
       <div ref={errorText} className={styles.errorText}>
         <h1>ERROR 404 / PAGE NOT FOUND</h1>
+
         <p>
           You've wandered far, traveler. This page doesn't exist, but luckily we
           have a portal here that can take you back to the main page.

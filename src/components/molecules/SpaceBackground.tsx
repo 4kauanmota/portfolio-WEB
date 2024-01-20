@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
-import styles from "./Background.module.scss";
+import styles from "./SpaceBackground.module.scss";
+
 import Star from "../atoms/Star";
 import Comet from "../atoms/Comet";
 
@@ -16,7 +17,7 @@ const Background = () => {
       starsArray.push(<Star id={i} key={i} />);
     }
     setStars(starsArray);
-    console.log(`Quantity of stars: ${randomQuantityStars}`);
+    // console.log(`Quantity of stars: ${randomQuantityStars}`);
 
     const randomQuantityComets = Math.trunc(Math.random() * 15 + 15);
     const cometsArray = [];
@@ -24,7 +25,7 @@ const Background = () => {
       cometsArray.push(<Comet id={i} key={i} />);
     }
     setComets(cometsArray);
-    console.log(`Quantity of comets: ${randomQuantityComets}`);
+    // console.log(`Quantity of comets: ${randomQuantityComets}`);
   }, []);
 
   if (comets && stars) {
@@ -38,6 +39,7 @@ const Background = () => {
           >
             <div>
               {stars.map((star) => star)}
+
               {comets.map((comet) => comet)}
             </div>
           </MouseParallax>
