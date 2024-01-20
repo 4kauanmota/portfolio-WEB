@@ -79,8 +79,9 @@ figure.planet {
     width: 100%;
 
     display: flex;
-    position: absolute;
     flex-direction: column;
+
+    position: absolute;
 
     color: colors.$text-primary;
 

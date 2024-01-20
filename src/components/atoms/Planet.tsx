@@ -44,9 +44,9 @@ const Planet = ({
 
       if (spaceAbove < spaceBelow) {
         captionPosition.style.top = "auto";
-        captionPosition.style.bottom = "-25%";
+        captionPosition.style.bottom = "-60px";
       } else {
-        captionPosition.style.top = "-25%";
+        captionPosition.style.top = "-60px";
         captionPosition.style.bottom = "auto";
       }
     }
