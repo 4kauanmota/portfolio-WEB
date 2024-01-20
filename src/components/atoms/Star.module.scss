@@ -41,7 +41,7 @@ $star-color: #ffffff;
     transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
   }
 
-  &:not(:not(.starAnimation)) {
+  &.starAnimation {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
     box-shadow: 0 0 35px 3.5px $star-color;
   }

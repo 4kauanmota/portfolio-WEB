@@ -10,7 +10,7 @@ const Background = () => {
   const [comets, setComets] = useState([]);
 
   useEffect(() => {
-    const randomQuantityStars = Math.trunc(Math.random() * 80 + 80);
+    const randomQuantityStars = Math.trunc(Math.random() * 60 + 120);
     const starsArray = [];
     for (let i = 0; i < randomQuantityStars; i++) {
       starsArray.push(<Star id={i} key={i} />);
