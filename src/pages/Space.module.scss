@@ -1,16 +1,25 @@
 @use "/src/theme/colors.scss";
 
-$backgrounds-primary: #000000;
-$backgrounds-secondary: #cccccc;
+$background: #000000;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 #space {
   width: 100%;
   height: 100%;
-  background-color: $backgrounds-primary;
+  background-color: $background;
 
   position: relative;
 
-  overflow: hidden;
+  animation: fadeIn 8s linear;
 
   #saturn_ring {
     transform: translateY(4px);
