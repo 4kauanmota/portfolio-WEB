@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./Error404.module.scss";
 import BlackHoleStar from "../models/BlackHoleStar";
+import Spaceship from "../components/atoms/Spaceship";
 
 const Error404 = () => {
+  const navigate = useNavigate();
+
   const errorPage = useRef(null);
   const errorText = useRef(null);
   const errorArea = useRef(null);
@@ -14,7 +18,11 @@ const Error404 = () => {
   let currentTime = 0;
 
   const errorClick = () => {
+    const errorPageElement = errorPage.current;
     const errorAreaElement = errorArea.current;
+
+    errorPageElement.style.opacity = 0;
+    errorPageElement.style.transform = "scale(2.1)";
     errorAreaElement.classList.add("open");
 
     collapse = false;
@@ -29,12 +37,20 @@ const Error404 = () => {
   const errorMouseOver = () => {
     if (expanse == false) {
       collapse = false;
+
+      if (collapse == false) {
+        errorText.current.style.opacity = 0;
+      }
     }
   };
 
   const errorMouseOut = () => {
     if (expanse == false) {
       collapse = true;
+
+      if (collapse == true) {
+        errorText.current.style.opacity = 1;
+      }
     }
   };
 
@@ -48,6 +64,14 @@ const Error404 = () => {
       }
     );
   })();
+
+  const goBack = () => {
+    errorClick();
+
+    setTimeout(() => {
+      navigate("/");
+    }, 8000);
+  };
 
   useEffect(() => {
     const errorPageElement = errorPage.current;
@@ -112,33 +136,47 @@ const Error404 = () => {
 
     setDPI(canvas, 192);
     init();
+
+    setTimeout(() => {
+      errorClick();
+
+      setTimeout(() => {
+        navigate("/");
+      }, 8000);
+    }, 100000);
   }, []);
 
   return (
-    <section ref={errorPage} id={styles.blackhole}>
-      <div ref={errorText} className={styles.errorText}>
-        <h1>ERROR 404 / PAGE NOT FOUND</h1>
+    <>
+      <Spaceship />
 
-        <p>
-          You've wandered far, traveler. This page doesn't exist, but luckily we
-          have a portal here that can take you back to the main page.
-        </p>
-      </div>
-
-      <a>
-        <div
-          ref={errorArea}
-          className={styles.errorArea}
-          onClick={errorClick}
-          onMouseOver={errorMouseOver}
-          onMouseOut={errorMouseOut}
-        >
-          <span>Click here</span>
+      <section ref={errorPage} id={styles.blackhole}>
+        <div ref={errorText} className={styles.errorText}>
+          <h1>ERROR 404 / PAGE NOT FOUND</h1>
+          <p>
+            <span>
+              You've wandered far, traveler. This page doesn't exist, but
+            </span>{" "}
+            luckily we have a portal here that can take you back to the main
+            page
+          </p>
         </div>
-      </a>
 
-      <canvas ref={blackHole} />
-    </section>
+        <a onClick={goBack}>
+          <div
+            ref={errorArea}
+            className={styles.errorArea}
+            onClick={errorClick}
+            onMouseOver={errorMouseOver}
+            onMouseOut={errorMouseOut}
+          >
+            <span>Click here</span>
+          </div>
+        </a>
+
+        <canvas ref={blackHole} />
+      </section>
+    </>
   );
 };
 
