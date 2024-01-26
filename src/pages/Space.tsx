@@ -28,7 +28,7 @@ const Space = () => {
           isAbsolutelyPositioned
           strength={0.03}
         >
-          <span className="hideOnPhone">
+          <span className="hideIfVertical">
             <Planet // Sun
               height={"103%"}
               planet={sun}

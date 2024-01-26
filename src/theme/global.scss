@@ -1,7 +1,7 @@
 @use "./screens.scss";
 
 @media (max-width: screens.$tablet-max) {
-  :global(.hideOnPhone) {
+  :global(.hideIfVertical) {
     display: none;
   }
 }

@@ -7,19 +7,21 @@ import hud from "../../../public/assets/img/spaceship/hud.png";
 
 const Spaceship = () => {
   return (
-    <div id={styles.spaceship}>
-      <img
-        src={structure}
-        alt="Structure of the front of the ship"
-        className={styles.hud}
-      />
+    <span className="hideIfVertical">
+      <div id={styles.spaceship}>
+        <img
+          src={structure}
+          alt="Structure of the front of the ship"
+          className={styles.hud}
+        />
 
-      <img
-        src={hud}
-        alt="Hud of the front of the ship"
-        className={styles.hud}
-      />
-    </div>
+        <img
+          src={hud}
+          alt="Hud of the front of the ship"
+          className={styles.hud}
+        />
+      </div>
+    </span>
   );
 };
 

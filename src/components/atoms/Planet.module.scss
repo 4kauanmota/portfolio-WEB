@@ -117,6 +117,15 @@ figure.planet {
 
 @media (max-width: screens.$tablet-max) {
   figure.planet {
-    position: static;
+    width: 100% !important;
+    position: relative;
+    width: 55% !important;
+    animation: none !important;
+
+    margin: 0.5rem;
+
+    figcaption {
+      opacity: 1;
+    }
   }
 }
