@@ -38,16 +38,20 @@ const Planet = ({
     const captionPosition = planetCaption.current;
 
     if (captionPosition) {
-      const spaceAbove = event.currentTarget.getBoundingClientRect().top;
-      const spaceBelow =
-        window.innerHeight - spaceAbove - event.currentTarget.clientHeight;
+      const element = event.currentTarget;
+      const spaceAbove = element.getBoundingClientRect().top;
+      const spaceBelow = window.innerHeight - spaceAbove - element.clientHeight;
+      const spaceLeft = element.getBoundingClientRect().left;
+      const spaceRight = window.innerWidth - spaceLeft - element.clientWidth;
 
-      if (spaceAbove < spaceBelow) {
-        captionPosition.style.top = "auto";
-        captionPosition.style.bottom = "-60px";
-      } else {
-        captionPosition.style.top = "-60px";
-        captionPosition.style.bottom = "auto";
+      if (spaceLeft + spaceRight > spaceAbove + spaceBelow) {
+        if (spaceAbove < spaceBelow) {
+          captionPosition.style.top = "auto";
+          captionPosition.style.bottom = "-60px";
+        } else {
+          captionPosition.style.top = "-60px";
+          captionPosition.style.bottom = "auto";
+        }
       }
     }
   };
