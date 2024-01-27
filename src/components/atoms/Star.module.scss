@@ -1,14 +1,18 @@
 @use "/src/theme/colors.scss";
 
-$star-size: random(4) * 1px;
 $star-color: #ffffff;
 
 @keyframes starAnim {
+  0% {
+    opacity: 0;
+  }
+
   50% {
     transform: scale(1.5) rotate(25deg);
   }
 
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -43,6 +47,5 @@ $star-color: #ffffff;
 
   &.starAnimation {
     animation: starAnim 5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-    box-shadow: 0 0 35px 3.5px $star-color;
   }
 }

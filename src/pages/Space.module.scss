@@ -20,9 +20,9 @@ $background: #000000;
 
   position: relative;
 
-  animation: fadeIn 6s ease-in;
+  animation: fadeIn 4s ease-in;
 
-  overflow-x: hidden;
+  overflow: hidden;
 
   #saturn_ring {
     transform: translateY(4px);
