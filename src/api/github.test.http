@@ -1,0 +1,11 @@
+# GET PROFILE
+
+https://api.github.com/users/4kauanmota
+
+###
+
+# GET PROFILE REPOS
+
+https://api.github.com/users/4kauanmota/repos
+
+###
