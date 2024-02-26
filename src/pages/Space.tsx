@@ -51,7 +51,7 @@ const Space = () => {
             <Planet // Venus
               width={"12.5%"}
               planet={venus}
-              description="Venus - Contact"
+              description="Contact - Venus"
               colors={["yellow", "orange"]}
               position={{ left: "11%" }}
               rotation={100} // 5.832
@@ -62,8 +62,8 @@ const Space = () => {
             <Planet // Earth
               width={"13%"}
               planet={earth}
-              description="Earth - About me"
-              colors={["blue", "green"]}
+              description="About me - Earth"
+              colors={["#3391b8", "#3cb05d"]}
               position={{ left: "25%" }}
               rotation={21.6} // 21.6
               translation={20} // 20
@@ -73,7 +73,7 @@ const Space = () => {
             <Planet // Mars
               width={"12%"}
               planet={mars}
-              description="Mars - Career"
+              description="Career - Mars"
               colors={["red", "red"]}
               position={{ left: "39.5%" }}
               rotation={28.8} // 28.8
@@ -84,7 +84,7 @@ const Space = () => {
             <Planet // Saturn
               width={"14%"}
               planet={saturn}
-              description="Saturn - Stacks"
+              description="Stacks - Saturn"
               colors={["orange", "yellow"]}
               position={{ left: "56%" }}
               rotation={10.8} // 10.8
@@ -96,7 +96,7 @@ const Space = () => {
             <Planet // Neptune
               width={"13.5%"}
               planet={neptune}
-              description="Neptune - Projects"
+              description="Projects - Neptune"
               colors={["blue", "purple"]}
               position={{ left: "74.5%" }}
               rotation={16.08} // 16.08

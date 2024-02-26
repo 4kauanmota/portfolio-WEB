@@ -9,7 +9,7 @@ type CometType = {
 const Comet = ({ id }: CometType) => {
   const randomTop = Math.trunc(Math.random() * 100 + 1);
 
-  const randomTime = Math.trunc(Math.random() * 1000000 + 1);
+  const randomTime = Math.trunc(Math.random() * 100000 + 1);
   const randomSide = Math.floor(Math.random() * 2);
   const randomRotate = Math.trunc(Math.random() * 10 + 1);
 

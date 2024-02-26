@@ -1,0 +1,11 @@
+# GET PROFILE
+
+http://localhost:3000/public/informations/curiosities.json
+
+###
+
+# GET PROFILE REPOS
+
+https://api.github.com/users/4kauanmota/repos
+
+###

@@ -20,10 +20,6 @@ const Star = ({ id }: StarType) => {
 
       star.style.width = `${randomSize}px`;
       star.style.height = `${randomSize}px`;
-
-      setTimeout(() => {
-        star.classList.remove(styles.starAnimation);
-      }, 5000);
     }
   }, randomTime);
 

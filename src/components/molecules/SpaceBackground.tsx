@@ -1,34 +1,25 @@
 import React, { useEffect, useState } from "react";
+import StarSky from "react-star-sky";
+
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./SpaceBackground.module.scss";
 
-import Star from "../atoms/Star";
 import Comet from "../atoms/Comet";
 
 const Background = () => {
-  const [stars, setStars] = useState([]);
   const [comets, setComets] = useState([]);
 
   useEffect(() => {
-    const randomQuantityStars = Math.trunc(Math.random() * 60 + 120);
-    const starsArray = [];
-    for (let i = 0; i < randomQuantityStars; i++) {
-      starsArray.push(<Star id={i} key={i} />);
-    }
-    setStars(starsArray);
-    // console.log(`Quantity of stars: ${randomQuantityStars}`);
-
     const randomQuantityComets = Math.trunc(Math.random() * 15 + 15);
     const cometsArray = [];
     for (let i = 0; i < randomQuantityComets; i++) {
       cometsArray.push(<Comet id={i} key={i} />);
     }
     setComets(cometsArray);
-    // console.log(`Quantity of comets: ${randomQuantityComets}`);
   }, []);
 
-  if (comets && stars) {
+  if (comets) {
     return (
       <>
         <div className={styles.container}>
@@ -38,7 +29,11 @@ const Background = () => {
             isAbsolutelyPositioned
           >
             <div>
-              {stars.map((star) => star)}
+              <StarSky
+                frameRate={30}
+                debugFPS={false}
+                style={{ width: "100vw", height: "100vh" }}
+              />
 
               {comets.map((comet) => comet)}
             </div>

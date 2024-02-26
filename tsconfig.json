@@ -10,5 +10,6 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "./types",
+    "resolveJsonModule": true,
   },
 }
