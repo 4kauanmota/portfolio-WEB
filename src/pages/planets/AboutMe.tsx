@@ -1,13 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
+import StarSky from "react-star-sky";
 import Lottie from "lottie-react";
 
 import styles from "./AboutMe.module.scss";
+import Planet from "../../components/atoms/Planet";
 
 import { getCuriosities } from "../../api/curiosities";
-
-import perfil from "../../../public/assets/img/perfil.jpg";
 import info from "../../../public/animations/info.json";
 import infoLoop from "../../../public/animations/info-loop.json";
+import perfil from "../../../public/assets/img/perfil.jpg";
+import earth from "../../../public/assets/img/planets/earth.png";
 
 const AboutMe = () => {
   const iconRef = useRef(null);
@@ -62,57 +64,93 @@ const AboutMe = () => {
   };
 
   return (
-    <section id={styles.earth}>
-      <div className={styles.title}>
-        <span className={styles.titleContainer}>
-          <img src={perfil} />
-          <h1>About Me</h1>
-        </span>
-      </div>
+    <>
+      <StarSky
+        frameRate={30}
+        debugFPS={false}
+        style={{
+          width: "100vw",
+          height: "100vh",
+          position: "fixed",
+        }}
+      />
 
-      <article className={styles.presentation}>
-        <p>
-          I am a technology enthusiast with a background in Analysis and
-          Development of Systems, on the verge of graduating at the age of 20. I
-          bring 7 months of experience as a Front-End Developer, where I honed
-          my skills in coding, focusing on creating and refactoring code to make
-          websites more responsive and dynamic.
-        </p>
-
-        <p>
-          In my internship as a Mobile Developer, I specialized in React Native
-          and AWS, actively participating in agile meetings following the Scrum
-          framework. I consistently sought to broaden my knowledge, working on
-          simple projects during my studies and tackling more complex endeavors
-          in dedicated sprints. This experience not only enhanced my technical
-          skills but also refined my communication and teamwork abilities.
-        </p>
-
-        <p>
-          I hold the AWS Certified Cloud Practitioner certification, validating
-          my expertise in cloud solutions.
-        </p>
-      </article>
-
-      <article className={styles.details}>
-        <button className={styles.curiosities} onClick={() => newCuriosity()}>
-          <span>
-            <Lottie
-              lottieRef={iconRef}
-              animationData={icon}
-              loop={false}
-              autoplay={false}
-              style={{ width: 200, height: 200 }}
-            />
+      <section id={styles.earth}>
+        <header>
+          <span className={styles.title}>
+            <img src={perfil} />
+            <h1>About Me</h1>
           </span>
+        </header>
 
-          <div>
-            <h3>{actualCuriosity.type}</h3>
-            <p>{actualCuriosity.text}</p>
-          </div>
-        </button>
-      </article>
-    </section>
+        <main>
+          <article className={styles.presentation}>
+            <p>
+              I am a technology enthusiast with a background in Analysis and
+              Development of Systems, on the verge of graduating at the age of
+              20. I bring 7 months of experience as a Front-End Developer, where
+              I honed my skills in coding, focusing on creating and refactoring
+              code to make websites more responsive and dynamic.
+            </p>
+
+            <p>
+              In my internship as a Mobile Developer, I specialized in React
+              Native and AWS, actively participating in agile meetings following
+              the Scrum framework. I consistently sought to broaden my
+              knowledge, working on simple projects during my studies and
+              tackling more complex endeavors in dedicated sprints. This
+              experience not only enhanced my technical skills but also refined
+              my communication and teamwork abilities.
+            </p>
+
+            <p>
+              I hold the AWS Certified Cloud Practitioner certification,
+              validating my expertise in cloud solutions.
+            </p>
+          </article>
+
+          <article className={styles.details}>
+            <button
+              className={styles.curiosities}
+              onClick={() => newCuriosity()}
+            >
+              <span className={styles.icon}>
+                <Lottie
+                  lottieRef={iconRef}
+                  animationData={icon}
+                  loop={false}
+                  autoplay={false}
+                  style={{ width: 200, height: 200 }}
+                />
+              </span>
+
+              <div className={styles.curiosity}>
+                <h3>{actualCuriosity.type}</h3>
+                <p>{actualCuriosity.text}</p>
+              </div>
+            </button>
+          </article>
+        </main>
+
+        <footer>
+          <Planet // Earth
+            width={"120%"}
+            planet={earth}
+            description="About me - Earth"
+            colors={["#3391b8", "#3cb05d"]}
+            position={{ left: "-10%" }}
+            rotation={21.6} // 21.6
+            translation={0} // 20
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "inline-block",
+              position: "relative",
+            }}
+          />
+        </footer>
+      </section>
+    </>
   );
 };
 

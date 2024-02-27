@@ -1,4 +1,5 @@
 import React, { CSSProperties, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import styles from "./Planet.module.scss";
@@ -15,6 +16,7 @@ type PlanetType = {
   translation?: number;
   link?: string;
   style?: CSSProperties;
+  imageStyle?: CSSProperties;
 };
 
 const Planet = ({
@@ -29,8 +31,10 @@ const Planet = ({
   translation,
   link,
   style,
+  imageStyle,
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
+
   const [planetTitle, planetDescription] = description.split("-");
   const planetCaption = useRef(null);
 
@@ -47,9 +51,9 @@ const Planet = ({
       if (spaceLeft + spaceRight > spaceAbove + spaceBelow) {
         if (spaceAbove < spaceBelow) {
           captionPosition.style.top = "auto";
-          captionPosition.style.bottom = "-65px";
+          captionPosition.style.bottom = "-70px";
         } else {
-          captionPosition.style.top = "-65px";
+          captionPosition.style.top = "-70px";
           captionPosition.style.bottom = "auto";
         }
       }
@@ -70,58 +74,63 @@ const Planet = ({
       };
 
   return (
-    <Link
-      to={link}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <figure
+    <motion.div>
+      <Link
+        to={link}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         style={{
-          width: width,
-          height: height,
-          ...position,
-          ...translationAnimationStyles,
+          ...style,
         }}
-        className={styles.planet}
-        id={link}
-        onMouseOver={captionPosition}
       >
-        <img
-          src={planet}
-          alt={description}
+        <figure
           style={{
-            ...{
-              animation: `${styles.rotationAnim} ${
-                rotation ?? 0
-              }s linear infinite`,
-            },
-            ...style,
+            width: width,
+            height: height,
+            ...position,
+            ...translationAnimationStyles,
           }}
-        />
+          className={styles.planet}
+          id={link}
+          onMouseOver={captionPosition}
+        >
+          <img
+            src={planet}
+            alt={description}
+            style={{
+              ...{
+                animation: `${styles.rotationAnim} ${
+                  rotation ?? 0
+                }s linear infinite`,
+              },
+              ...imageStyle,
+            }}
+          />
 
-        {ring ? (
-          <img src={ring} alt={description} className={styles.ring} />
-        ) : null}
+          {ring ? (
+            <img src={ring} alt={description} className={styles.ring} />
+          ) : null}
 
-        {link ? (
-          <figcaption ref={planetCaption}>
-            <span
-              className={styles.title}
-              style={{ color: colors ? colors[0] : null }}
-            >
-              {planetTitle}
-            </span>
+          {link ? (
+            <figcaption ref={planetCaption}>
+              <span
+                className={styles.title}
+                style={{ color: colors ? colors[0] : null }}
+              >
+                {planetTitle}
+              </span>
 
-            <span
-              className={styles.description}
-              style={{ color: colors ? colors[1] : null }}
-            >
-              {planetDescription}
-            </span>
-          </figcaption>
-        ) : null}
-      </figure>
-    </Link>
+              <span
+                className={styles.description}
+                style={{ color: colors ? colors[1] : null }}
+              >
+                {planetDescription}
+              </span>
+            </figcaption>
+          ) : null}
+        </figure>
+      </Link>
+    </motion.div>
   );
 };
 

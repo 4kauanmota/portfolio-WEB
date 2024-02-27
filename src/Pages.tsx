@@ -11,10 +11,13 @@ import AboutMe from "./pages/planets/AboutMe";
 import Career from "./pages/planets/Career";
 
 import Error404 from "./pages/Error404";
+import Spaceship from "./components/atoms/Spaceship";
 
 const Pages = () => {
   return (
     <Router>
+      <Spaceship />
+
       <Routes>
         <Route path="/">
           <Route index={true} element={<Space />} />

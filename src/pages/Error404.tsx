@@ -22,7 +22,7 @@ const Error404 = () => {
     const errorAreaElement = errorArea.current;
 
     errorPageElement.style.opacity = 0;
-    errorPageElement.style.transform = "scale(2.1)";
+    errorPageElement.style.transform = "scale(2)";
     errorAreaElement.classList.add("open");
 
     collapse = false;
@@ -142,7 +142,7 @@ const Error404 = () => {
 
       setTimeout(() => {
         navigate("/");
-      }, 8000);
+      }, 12000);
     }, 100000);
   }, []);
 

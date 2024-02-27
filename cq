@@ -1,0 +1,281 @@
+[33mcommit c0d2ae2ce248bebd9194543974a790aafbf24569[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Mon Feb 26 13:38:28 2024 -0300
+
+    :sparkles: feat: New style in the stars
+
+[33mcommit 7211e96a595581dcbe4cc07bd07d014b78f9ad59[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sun Feb 4 23:38:59 2024 -0300
+
+    :sparkles: feat: Github api fetch
+
+[33mcommit 2ef75ea35969140e5819931c31f62f92682842f6[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Jan 27 19:53:26 2024 -0300
+
+    :construction: 3. Testing the responsiveness of the 404 error page
+
+[33mcommit 9160c748c0d441f55cd7ca049b105e8ddf82c86d[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Jan 25 23:22:49 2024 -0300
+
+    :construction: 2. Testing the responsiveness of the main page
+
+[33mcommit 763e006d77beeb7e4e3b6e46839aa1fbfcfbf7c3[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Jan 25 22:54:55 2024 -0300
+
+    :construction: 1. Testing the responsiveness of the main page
+
+[33mcommit 0f77ddc3b10f24986251589d483913f413e32cb8[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Wed Jan 24 23:50:38 2024 -0300
+
+    :sparkles: feat: New configuration on the 404 error page
+
+[33mcommit c59945f2ce8cd8f540ba9dc3301454883867bdf1[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Jan 20 15:40:01 2024 -0300
+
+    :sparkles: feat: Fade in animation in space
+
+[33mcommit 7b342186261bb8be34f4ef933cb6613ab372f4e0[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Jan 20 15:25:44 2024 -0300
+
+    :recycle: refactor: Organizing the code
+
+[33mcommit a0eb0187cb8d7b349246fbe7ca5497abfbae8a90[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Jan 20 14:49:53 2024 -0300
+
+    :sparkles: feat: New configuration for the stars
+
+[33mcommit bb5ddf335e7026e546cd79d9f928c5713686d3c7[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Jan 20 12:30:04 2024 -0300
+
+    :sparkles: feat: Defining a standart position for captions
+
+[33mcommit c19bc5d84be8b023e47b51d08b5a5d49a9170410[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sun Jan 14 21:35:31 2024 -0300
+
+    :sparkles: feat: New configuration of the planets
+
+[33mcommit 89f42e6c836a75d328c077fd933b6d446902021f[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Jan 12 18:49:01 2024 -0300
+
+    :lipstick: feat: New caption style
+
+[33mcommit 63cf9e8785a801db7e672ef34af163b0ba6b92f7[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Jan 9 22:23:56 2024 -0300
+
+    :sparkles: feat: Adaptive caption position
+
+[33mcommit 675143afc5ae2786b08a2831fe0b8cf869f6662e[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Mon Jan 8 14:39:47 2024 -0300
+
+    :sparkles: feat: Spaceship structure
+
+[33mcommit 37ccdd77498d923f9d348b28acfa4a4e3613b6ad[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Jan 4 21:20:56 2024 -0300
+
+    :lipstick: feat: New style on the planets
+
+[33mcommit 8af038c9febeca733e60dfdd5800c1af7ad9f107[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Wed Jan 3 14:38:21 2024 -0300
+
+    :sparkles: feat: Error 404 page
+
+[33mcommit c4f7d6932e506e20b8ef313a6d8d0374b63a5936[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Dec 30 16:11:59 2023 -0300
+
+    :wrench: chore: Allowing to access pages via the url on the development server
+
+[33mcommit f57773a9a54669d9930ec1e27972de20641c3d3b[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Dec 30 15:47:37 2023 -0300
+
+    :sparkles: feat: Error 404 page first test
+
+[33mcommit d9b4eca442a349d402c3fc34c53dea5411c31e84[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 29 20:40:38 2023 -0300
+
+    :recycle: refactor: Organizing code
+
+[33mcommit 55c2efb8f09d0affbd869c030948580791a45c2b[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 29 19:36:47 2023 -0300
+
+    :lipstick: feat: Planets individual background color
+
+[33mcommit 5085024412985285179b5b5810ccf9914a671f6d[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 29 19:08:07 2023 -0300
+
+    :bug: fix: Comet is null when changing pages
+
+[33mcommit 0dec644b7d26612e40f87dcb59797d96fe3d0e23[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 22 12:46:40 2023 -0300
+
+    :lipstick: feat: Setting planets caption position & color
+
+[33mcommit 2d322e1f126a05029cd5b6022fd551c057fbe8fa[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Dec 21 23:13:07 2023 -0300
+
+    :sparkles: feat: Planets rotation & translation animation
+
+[33mcommit 406c867157219df04b49cda618252d00b1c64e71[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Dec 21 16:05:33 2023 -0300
+
+    :sparkles: feat: Comets new configuration
+
+[33mcommit 7e49949962f6aba82d49f1bfefb3a8aa3436c675[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Dec 21 14:28:44 2023 -0300
+
+    :sparkles: feat: Stars new configuration
+
+[33mcommit 081a64d76a01cc95ea059954b392f302af246313[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Dec 21 13:43:27 2023 -0300
+
+    :sparkles: feat: Planets new configuration
+
+[33mcommit 8d0ef0d6593e7e0b375e2730ca6005d05d30c741[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Thu Dec 21 13:39:09 2023 -0300
+
+    :sparkles: feat: Planets caption
+
+[33mcommit 6a97b2eab4ae69966f1e0f960ba44163cd046e30[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Dec 12 00:09:07 2023 -0300
+
+    :sparkles: feat: Constellation first test
+
+[33mcommit 5cf98c0641f6cba0a93eeb6e6f40feccabebf170[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 1 23:33:06 2023 -0300
+
+    :lipstick: feat: Organizing styles
+
+[33mcommit 83df372d09b89939853b9d1648b81666215e464c[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 1 23:09:40 2023 -0300
+
+    :wrench: chore: Removing scss module loader
+
+[33mcommit 98d6d1380557b10e21427b5fecdbf6d56897c68c[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 1 16:10:12 2023 -0300
+
+    :sparkles: feat: First responsiveness test
+
+[33mcommit dd3fe4962d474b14485bfb02f7143a2c7f8d2b77[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Fri Dec 1 14:47:18 2023 -0300
+
+    :zap: perf: Removing dust
+
+[33mcommit 431e0982ec98cbc0051e26842121ca31251fff70[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 19 18:05:24 2023 -0300
+
+    :zap: perf: Decreasing cursor trailing speed
+
+[33mcommit 58a7405470df3d3fb9bc4d1fe46156463f8d6c0c[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 19 16:56:32 2023 -0300
+
+    :sparkles: feat: Custom cursor
+
+[33mcommit 646502d8cc9c377e70862663dc66f02a2d9b0c0f[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 19 15:04:08 2023 -0300
+
+    :sparkles: feat: Blue dust in background
+
+[33mcommit 0ef64855553ce473d8230013a3223be3c06eff1a[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 23:24:30 2023 -0300
+
+    :bug: fix: Pages bugging with the stars and comets
+
+[33mcommit 5797af6b89793255a2f9ae3f5c8e108564d94382[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 22:18:14 2023 -0300
+
+    :sparkles: feat: Comet component
+
+[33mcommit 4d027de367d6b3f123f24f0df46338376bbfcff1[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 19:44:55 2023 -0300
+
+    :sparkles: feat: Star logic
+
+[33mcommit a1011e059163452470f2d5bca9890189d447da22[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 18:59:54 2023 -0300
+
+    :recycle: refactor: Code organization
+
+[33mcommit d81fe6a1ab8572fc9666aaa37a1022d2944f4596[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 17:12:44 2023 -0300
+
+    :sparkles: feat: Star component
+
+[33mcommit 922b8af9badcbf438e5f754ec541d849abf21730[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Tue Sep 5 13:48:26 2023 -0300
+
+    :wrench: chore: New project structure
+
+[33mcommit 81a06d7d92ba13db28e0235f80ce82cb4a8dcfe7[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Mon Sep 4 17:10:04 2023 -0300
+
+    :sparkles: feat: Connecting planets and routes
+
+[33mcommit 70518d1e72220f4bbec28bdd98d8d2d4f06e5864[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Mon Sep 4 16:54:15 2023 -0300
+
+    :sparkles: feat: Parallax effect
+
+[33mcommit 73ae6923c94048c16b6b0487277aa3bc7646f811[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Mon Sep 4 15:53:00 2023 -0300
+
+    :sparkles: feat: Portfolio routes
+
+[33mcommit c8022df85176516d7ce916b6c6acda01474e1acd[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sun Aug 20 04:06:11 2023 -0300
+
+    :sparkles: feat: Planet component
+
+[33mcommit de459dd64c3a0ed86bdff165418150ad6aa66e74[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Aug 19 03:42:39 2023 -0300
+
+    :tada: First commit
+
+[33mcommit d6763a3c56f4484261baf3eb0681cd29513bc038[m
+Author: Kauan Soares Mota <4kauanmota@gmail.com>
+Date:   Sat Aug 19 03:07:45 2023 -0300
+
+    Initialize project using Create React App

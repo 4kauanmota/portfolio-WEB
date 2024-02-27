@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import StarSky from "react-star-sky";
-
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./SpaceBackground.module.scss";

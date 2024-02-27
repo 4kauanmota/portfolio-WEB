@@ -1,11 +1,6 @@
 @use "/src/theme/colors.scss";
 @use "/src/theme/screens.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400&display=swap");
-
-$title-font: "Audiowide", sans-serif;
-$description-font: "Oxanium", sans-serif;
+@use "/src/theme/fonts.scss";
 
 $selection-border: #ffffff;
 
@@ -40,14 +35,18 @@ figure.planet {
 
   border-radius: 50%;
 
+  border: solid 2px #{$selection-border}00;
+
   transition: 0.3s all;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 
     border: solid 2px $selection-border;
     border-radius: 32px;
     padding: 0.25rem;
+
+    opacity: 1;
   }
 
   &:hover figcaption {
@@ -83,12 +82,12 @@ figure.planet {
 
     position: absolute;
 
-    color: colors.$text-primary;
+    color: colors.$text;
 
     transition: 0.2s all ease-in-out;
 
     .title {
-      font-family: $title-font;
+      font-family: fonts.$planet-title;
       font-weight: bold;
       text-transform: uppercase;
       font-size: 1.2rem;
@@ -102,7 +101,7 @@ figure.planet {
         width: 65px;
         height: 2px;
 
-        margin: 4px auto;
+        margin: 6px auto;
 
         background-color: #ffffff;
       }
@@ -110,7 +109,7 @@ figure.planet {
 
     .description {
       font-size: 1.2rem;
-      font-family: $description-font;
+      font-family: fonts.$planet-description;
 
       text-align: center;
     }

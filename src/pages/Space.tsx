@@ -1,9 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
 
-import Spaceship from "../components/atoms/Spaceship";
 import SpaceBackground from "../components/molecules/SpaceBackground";
 import Planet from "../components/atoms/Planet";
 
@@ -18,9 +18,12 @@ import neptune from "../../public/assets/img/planets/neptune.png";
 const Space = () => {
   return (
     <>
-      <Spaceship />
-
-      <div id={styles.space}>
+      <motion.div
+        id={styles.space}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 4 }}
+      >
         <SpaceBackground />
 
         <MouseParallax
@@ -35,10 +38,11 @@ const Space = () => {
               description="Sun"
               position={{ left: "-45%", right: "92%" }}
               rotation={300} // 648
-              style={{
+              imageStyle={{
                 borderRadius: "60%",
                 boxShadow:
-                  "0 0 30px 10px #FFC546, 0 0 60px 10px orange, 0 0 80px 10px red",
+                  "0 0 30px 10px #FFC546, 0 0 60px 10px orange, 0 0 80px 10px red, inset 0 0 30px 10px #FFC546",
+                pointerEvents: "none",
               }}
             />
           </span>
@@ -64,7 +68,7 @@ const Space = () => {
               planet={earth}
               description="About me - Earth"
               colors={["#3391b8", "#3cb05d"]}
-              position={{ left: "25%" }}
+              position={{ left: "25.1%" }}
               rotation={21.6} // 21.6
               translation={20} // 20
               link="aboutMe"
@@ -86,7 +90,7 @@ const Space = () => {
               planet={saturn}
               description="Stacks - Saturn"
               colors={["orange", "yellow"]}
-              position={{ left: "56%" }}
+              position={{ left: "55.9%" }}
               rotation={10.8} // 10.8
               translation={60} // 580
               link="stacks"
@@ -105,7 +109,7 @@ const Space = () => {
             />
           </MouseParallax>
         </MouseParallax>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,29 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-$sky: #3391b8;
-$grass: #3cb05d;
-$land: #8c5532;
-
-$font: "Montserrat", sans-serif;
-$font-color: #ffffff;
+@use "/src/theme/colors.scss";
+@use "/src/theme/fonts.scss";
 
 #earth {
   width: 100%;
   height: 100%;
 
-  background-color: $land;
-  color: $font-color;
-
   overflow: auto;
 
-  div.title {
-    background-color: $sky;
-    padding: 2rem 0;
+  color: colors.$text;
+  font-family: fonts.$primary;
 
-    font-family: $font;
+  position: relative;
 
-    .titleContainer {
-      width: 40%;
+  padding: 8.5rem 0 0 0;
+
+  header {
+    .title {
+      width: 70%;
       height: 100%;
 
       display: flex;
@@ -41,68 +34,75 @@ $font-color: #ffffff;
 
       h1 {
         font-size: 3.5rem;
-        font-weight: 300;
+        font-weight: 600;
       }
     }
   }
 
-  article.presentation {
-    background-color: $grass;
-    padding: 2rem 0;
+  main {
+    width: auto;
+    height: auto;
 
-    box-shadow: inset 0 10px 3px 0px $sky, inset 0 -10px 3px 0px $land;
-
-    font-family: $font;
-
-    p {
-      width: 60%;
-
-      margin: 1rem auto;
-
-      font-size: 1.3rem;
-      font-weight: 400;
-      text-align: justify;
-      line-height: 2rem;
-    }
-  }
-
-  article.details {
-    width: 100%;
-    height: 20%;
-
-    button.curiosities {
-      background: none;
-      color: $font-color;
-
-      width: 60%;
-      height: 100%;
-
-      margin: 0 auto;
-
-      box-shadow: -6px 6px 0 4px black;
-
-      border: solid black 0.15rem;
-      border-radius: 16px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 4rem;
-
-      transition: 0.5s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
-      &:hover {
-        box-shadow: 0 0 0 0 black;
-        transform: translate(-8px, 8px);
-        border: solid white 0.15rem;
-      }
+    article.presentation {
+      padding: 2rem 0;
 
       p {
-        font-family: $font;
-        font-weight: 500;
+        width: 70%;
 
+        margin: 1rem auto;
+
+        font-size: 1.3rem;
+        font-weight: 400;
         text-align: justify;
+        line-height: 2rem;
       }
     }
+
+    article.details {
+      width: 100%;
+      height: 20%;
+
+      button.curiosities {
+        background: none;
+
+        width: 70%;
+        height: 100%;
+
+        margin: 0 auto;
+
+        border: solid colors.$text 0.15rem;
+        border-radius: 16px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        color: colors.$text;
+
+        .curiosity {
+          width: 100%;
+
+          h3 {
+            text-align: left;
+          }
+
+          p {
+            font-weight: 500;
+
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 35vh;
+
+    margin: 2rem 0 0 0;
+
+    pointer-events: none;
+    overflow: hidden;
   }
 }

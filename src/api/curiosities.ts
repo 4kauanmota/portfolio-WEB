@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const URL = "/informations/curiosities.json";
 
 interface curiosity {
