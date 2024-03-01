@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
@@ -18,12 +17,7 @@ import neptune from "../../public/assets/img/planets/neptune.png";
 const Space = () => {
   return (
     <>
-      <motion.div
-        id={styles.space}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 4 }}
-      >
+      <div id={styles.space}>
         <SpaceBackground />
 
         <MouseParallax
@@ -33,10 +27,10 @@ const Space = () => {
         >
           <span className="hideIfVertical">
             <Planet // Sun
-              height={"103%"}
+              height={"100%"}
               planet={sun}
               description="Sun"
-              position={{ left: "-45%", right: "92%" }}
+              position={{ left: "-45vw", right: "92vw" }}
               rotation={300} // 648
               imageStyle={{
                 borderRadius: "60%",
@@ -79,7 +73,7 @@ const Space = () => {
               planet={mars}
               description="Career - Mars"
               colors={["red", "red"]}
-              position={{ left: "39.5%" }}
+              position={{ left: "39.7%" }}
               rotation={28.8} // 28.8
               translation={37.6} // 37.6
               link="career"
@@ -109,7 +103,7 @@ const Space = () => {
             />
           </MouseParallax>
         </MouseParallax>
-      </motion.div>
+      </div>
     </>
   );
 };

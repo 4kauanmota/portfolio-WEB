@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import StarSky from "react-star-sky";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./SpaceBackground.module.scss";
@@ -15,6 +14,7 @@ const Background = () => {
     for (let i = 0; i < randomQuantityComets; i++) {
       cometsArray.push(<Comet id={i} key={i} />);
     }
+
     setComets(cometsArray);
   }, []);
 
@@ -27,15 +27,7 @@ const Background = () => {
             enableOnTouchDevice
             isAbsolutelyPositioned
           >
-            <div>
-              <StarSky
-                frameRate={30}
-                debugFPS={false}
-                style={{ width: "100vw", height: "100vh" }}
-              />
-
-              {comets.map((comet) => comet)}
-            </div>
+            <div>{comets.map((comet) => comet)}</div>
           </MouseParallax>
         </div>
       </>

@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StarSky from "react-star-sky";
+import Starfield from "react-starfield";
+import { motion } from "framer-motion";
 
 import styles from "./PlanetBackground.module.scss";
 
-type PlanetBackgroundType = {
-  children: any;
-};
+type PlanetBackgroundType = { children: any };
 
 const PlanetBackground = ({ children }: PlanetBackgroundType) => {
-  return (
-    <div className={styles.container}>
-      <StarSky
-        frameRate={30}
-        debugFPS={false}
-        style={{
-          width: "100vw",
-          height: "100vh",
-          position: "fixed",
-          zIndex: 1,
-        }}
-      />
-      {children}
-    </div>
+  const [travel, setTravel] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTravel(false);
+    }, 2000);
+  }, []);
+
+  return travel ? (
+    <motion.div
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    ></motion.div>
+  ) : (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 4 }}
+        className={styles.planetBackground}
+      >
+        {children}
+      </motion.div>
+    </>
   );
 };
 

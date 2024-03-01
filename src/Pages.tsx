@@ -1,5 +1,5 @@
 import React from "react";
-
+import StarSky from "react-star-sky";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Space from "./pages/Space";
@@ -17,6 +17,11 @@ const Pages = () => {
   return (
     <Router>
       <Spaceship />
+      <StarSky
+        frameRate={30}
+        debugFPS={false}
+        style={{ width: "100vw", height: "100vh", position: "absolute" }}
+      />
 
       <Routes>
         <Route path="/">

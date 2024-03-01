@@ -64,8 +64,7 @@ const Planet = ({
     ? {
         animation: `${styles.translationAnim} ${
           translation ?? 0
-        }s linear infinite`,
-        animationPlayState: "paused",
+        }s linear infinite paused`,
       }
     : {
         animation: `${styles.translationAnim} ${

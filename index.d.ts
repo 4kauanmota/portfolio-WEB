@@ -1,5 +1,6 @@
 declare module "*.module.scss";
 
+declare module "lottie-react";
 declare module "react-star-sky";
 
 declare module "*.jpg";

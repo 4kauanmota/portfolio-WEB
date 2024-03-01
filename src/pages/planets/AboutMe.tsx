@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import StarSky from "react-star-sky";
+import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 
 import styles from "./AboutMe.module.scss";
@@ -10,25 +10,17 @@ import info from "../../../public/animations/info.json";
 import infoLoop from "../../../public/animations/info-loop.json";
 import perfil from "../../../public/assets/img/perfil.jpg";
 import earth from "../../../public/assets/img/planets/earth.png";
+import PlanetBackground from "../../components/atoms/PlanetBackground";
 
 const AboutMe = () => {
   const iconRef = useRef(null);
-
   const [icon, setIcon] = useState(info as any);
+
   const [curiosities, setCuriosities] = useState(null);
   const [actualCuriosity, setActualCuriosity] = useState({
     type: "",
     text: "",
   });
-
-  useEffect(() => {
-    const loadCuriosities = async () => {
-      setCuriosities(await getCuriosities());
-    };
-    loadCuriosities();
-
-    loadDetails();
-  }, []);
 
   const loadDetails = () => {
     if (curiosities) {
@@ -42,20 +34,37 @@ const AboutMe = () => {
       }
     }
 
-    iconRef.current.play();
+    if (iconRef.current) {
+      iconRef.current.play();
+    }
   };
+
+  useEffect(() => {
+    const loadCuriosities = async () => {
+      setCuriosities(await getCuriosities());
+    };
+    loadCuriosities();
+
+    loadDetails();
+
+    const iconInterval = setInterval(() => {
+      if (iconRef.current) {
+        iconRef.current.play();
+
+        setTimeout(() => {
+          iconRef.current.stop();
+        }, 2000);
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(iconInterval);
+    };
+  }, []);
 
   useEffect(() => {
     loadDetails();
   }, [actualCuriosity, curiosities]);
-
-  setInterval(() => {
-    iconRef.current.play();
-
-    setTimeout(() => {
-      iconRef.current.stop();
-    }, 2000);
-  }, 5000);
 
   const newCuriosity = () => {
     const random = Math.round(Math.random() * 1);
@@ -64,17 +73,7 @@ const AboutMe = () => {
   };
 
   return (
-    <>
-      <StarSky
-        frameRate={30}
-        debugFPS={false}
-        style={{
-          width: "100vw",
-          height: "100vh",
-          position: "fixed",
-        }}
-      />
-
+    <PlanetBackground>
       <section id={styles.earth}>
         <header>
           <span className={styles.title}>
@@ -137,7 +136,6 @@ const AboutMe = () => {
             width={"120%"}
             planet={earth}
             description="About me - Earth"
-            colors={["#3391b8", "#3cb05d"]}
             position={{ left: "-10%" }}
             rotation={21.6} // 21.6
             translation={0} // 20
@@ -150,7 +148,7 @@ const AboutMe = () => {
           />
         </footer>
       </section>
-    </>
+    </PlanetBackground>
   );
 };
 
