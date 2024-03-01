@@ -53,8 +53,13 @@ module.exports = {
       },
 
       {
-        test: /\.(png|svg|jp(e*)g|gif)$/i,
-        use: [{ loader: "file-loader" }],
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "images",
+          esModule: false,
+        },
       },
     ],
   },

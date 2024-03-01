@@ -4,13 +4,10 @@ import Lottie from "lottie-react";
 
 import styles from "./AboutMe.module.scss";
 import Planet from "../../components/atoms/Planet";
-
+import PlanetBackground from "../../components/atoms/PlanetBackground";
 import { getCuriosities } from "../../api/curiosities";
 import info from "../../../public/animations/info.json";
 import infoLoop from "../../../public/animations/info-loop.json";
-import perfil from "../../../public/assets/img/perfil.jpg";
-import earth from "../../../public/assets/img/planets/earth.png";
-import PlanetBackground from "../../components/atoms/PlanetBackground";
 
 const AboutMe = () => {
   const iconRef = useRef(null);
@@ -77,7 +74,7 @@ const AboutMe = () => {
       <section id={styles.earth}>
         <header>
           <span className={styles.title}>
-            <img src={perfil} />
+            <img src={require("../../../public/assets/img/perfil.jpg")} />
             <h1>About Me</h1>
           </span>
         </header>
@@ -134,7 +131,7 @@ const AboutMe = () => {
         <footer>
           <Planet // Earth
             width={"120%"}
-            planet={earth}
+            planet={require("../../../public/assets/img/planets/earth.png")}
             description="About me - Earth"
             position={{ left: "-10%" }}
             rotation={21.6} // 21.6

@@ -2,21 +2,18 @@ import React from "react";
 
 import styles from "./Spaceship.module.scss";
 
-import structure from "../../../public/assets/img/spaceship/structure.png";
-import hud from "../../../public/assets/img/spaceship/hud.png";
-
 const Spaceship = () => {
   return (
     <span className="hideIfVertical">
       <div id={styles.spaceship}>
         <img
-          src={structure}
+          src={require("../../../public/assets/img/spaceship/structure.png")}
           alt="Structure of the front of the ship"
           className={styles.hud}
         />
 
         <img
-          src={hud}
+          src={require("../../../public/assets/img/spaceship/hud.png")}
           alt="Hud of the front of the ship"
           className={styles.hud}
         />
