@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import StarSky from "react-star-sky";
-import Starfield from "react-starfield";
 import { motion } from "framer-motion";
 
 import styles from "./PlanetBackground.module.scss";
