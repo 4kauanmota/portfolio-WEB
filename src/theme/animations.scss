@@ -8,4 +8,16 @@
   }
 }
 
-$fadeIn: fadeIn 4s ease-in;
+@keyframes fadeOut {
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+$fadeIn: fadeIn 1s ease-in;
+
+$fadeOut: fadeOut 2s ease-out;

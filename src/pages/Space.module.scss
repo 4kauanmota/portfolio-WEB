@@ -10,6 +10,8 @@
 
   overflow: hidden;
 
+  animation: animations.$fadeIn;
+
   #saturn_ring {
     transform: translateY(4px);
   }
