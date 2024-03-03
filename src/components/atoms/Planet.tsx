@@ -73,63 +73,61 @@ const Planet = ({
       };
 
   return (
-    <motion.div>
-      <Link
-        to={link}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+    <Link
+      to={link}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        ...style,
+      }}
+    >
+      <figure
         style={{
-          ...style,
+          width: width,
+          height: height,
+          ...position,
+          ...translationAnimationStyles,
         }}
+        className={styles.planet}
+        id={link}
+        onMouseOver={captionPosition}
       >
-        <figure
+        <img
+          src={planet}
+          alt={description}
           style={{
-            width: width,
-            height: height,
-            ...position,
-            ...translationAnimationStyles,
+            ...{
+              animation: `${styles.rotationAnim} ${
+                rotation ?? 0
+              }s linear infinite`,
+            },
+            ...imageStyle,
           }}
-          className={styles.planet}
-          id={link}
-          onMouseOver={captionPosition}
-        >
-          <img
-            src={planet}
-            alt={description}
-            style={{
-              ...{
-                animation: `${styles.rotationAnim} ${
-                  rotation ?? 0
-                }s linear infinite`,
-              },
-              ...imageStyle,
-            }}
-          />
+        />
 
-          {ring ? (
-            <img src={ring} alt={description} className={styles.ring} />
-          ) : null}
+        {ring ? (
+          <img src={ring} alt={description} className={styles.ring} />
+        ) : null}
 
-          {link ? (
-            <figcaption ref={planetCaption}>
-              <span
-                className={styles.title}
-                style={{ color: colors ? colors[0] : null }}
-              >
-                {planetTitle}
-              </span>
+        {link ? (
+          <figcaption ref={planetCaption}>
+            <span
+              className={styles.title}
+              style={{ color: colors ? colors[0] : null }}
+            >
+              {planetTitle}
+            </span>
 
-              <span
-                className={styles.description}
-                style={{ color: colors ? colors[1] : null }}
-              >
-                {planetDescription}
-              </span>
-            </figcaption>
-          ) : null}
-        </figure>
-      </Link>
-    </motion.div>
+            <span
+              className={styles.description}
+              style={{ color: colors ? colors[1] : null }}
+            >
+              {planetDescription}
+            </span>
+          </figcaption>
+        ) : null}
+      </figure>
+    </Link>
   );
 };
 
