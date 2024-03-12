@@ -88,7 +88,7 @@ const Planet = ({
           ...position,
           ...translationAnimationStyles,
         }}
-        className={styles.planet}
+        className={`${styles.planet} ${!colors ? styles.unhover : null}`}
         id={link}
         onMouseOver={captionPosition}
       >

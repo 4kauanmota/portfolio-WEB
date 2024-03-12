@@ -37,7 +37,7 @@ const Pages = () => {
           transition={{ duration: 3 }}
         >
           <StarSky
-            frameRate={30}
+            frameRate={10}
             debugFPS={false}
             style={{ width: "100vw", height: "100vh", position: "absolute" }}
           />

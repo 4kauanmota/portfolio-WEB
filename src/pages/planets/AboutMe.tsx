@@ -7,34 +7,17 @@ import Planet from "../../components/atoms/Planet";
 import PlanetBackground from "../../components/atoms/PlanetBackground";
 import { getCuriosities } from "../../api/curiosities";
 import info from "../../../public/animations/info.json";
-import infoLoop from "../../../public/animations/info-loop.json";
 
 const AboutMe = () => {
-  const iconRef = useRef(null);
+  const iconPlay = useRef(null);
   const [icon, setIcon] = useState(info as any);
 
   const [curiosities, setCuriosities] = useState(null);
   const [actualCuriosity, setActualCuriosity] = useState({
-    type: "",
-    text: "",
+    type: null,
+    image: null,
+    text: null,
   });
-
-  const loadDetails = () => {
-    if (curiosities) {
-      newCuriosity();
-
-      if (actualCuriosity.type === "curiosity") {
-        setIcon(info);
-        setTimeout(() => {
-          setIcon(infoLoop);
-        }, 1000);
-      }
-    }
-
-    if (iconRef.current) {
-      iconRef.current.play();
-    }
-  };
 
   useEffect(() => {
     const loadCuriosities = async () => {
@@ -42,31 +25,24 @@ const AboutMe = () => {
     };
     loadCuriosities();
 
-    loadDetails();
-
     const iconInterval = setInterval(() => {
-      if (iconRef.current) {
-        iconRef.current.play();
-
-        setTimeout(() => {
-          iconRef.current.stop();
-        }, 2000);
-      }
-    }, 5000);
+      iconPlay?.current?.stop();
+      iconPlay?.current?.play();
+    }, 4000);
 
     return () => {
       clearInterval(iconInterval);
     };
   }, []);
 
-  useEffect(() => {
-    loadDetails();
-  }, [actualCuriosity, curiosities]);
-
   const newCuriosity = () => {
-    const random = Math.round(Math.random() * 1);
+    if (curiosities) {
+      const random = Math.abs(
+        Math.round(Math.random() * curiosities.length - 1)
+      );
 
-    setActualCuriosity(curiosities[random]);
+      setActualCuriosity(curiosities[random]);
+    }
   };
 
   return (
@@ -79,72 +55,75 @@ const AboutMe = () => {
           </span>
         </header>
 
-        <main>
-          <article className={styles.presentation}>
-            <p>
-              I am a technology enthusiast with a background in Analysis and
-              Development of Systems, on the verge of graduating at the age of
-              20. I bring 7 months of experience as a Front-End Developer, where
-              I honed my skills in coding, focusing on creating and refactoring
-              code to make websites more responsive and dynamic.
-            </p>
+        <main className={styles.presentation}>
+          <p>
+            I am a technology enthusiast with a background in Analysis and
+            Development of Systems, on the verge of graduating at the age of 20.
+            I bring 7 months of experience as a Front-End Developer, where I
+            honed my skills in coding, focusing on creating and refactoring code
+            to make websites more responsive and dynamic.
+          </p>
 
-            <p>
-              In my internship as a Mobile Developer, I specialized in React
-              Native and AWS, actively participating in agile meetings following
-              the Scrum framework. I consistently sought to broaden my
-              knowledge, working on simple projects during my studies and
-              tackling more complex endeavors in dedicated sprints. This
-              experience not only enhanced my technical skills but also refined
-              my communication and teamwork abilities.
-            </p>
+          <p>
+            In my internship as a Mobile Developer, I specialized in React
+            Native and AWS, actively participating in agile meetings following
+            the Scrum framework. I consistently sought to broaden my knowledge,
+            working on simple projects during my studies and tackling more
+            complex endeavors in dedicated sprints. This experience not only
+            enhanced my technical skills but also refined my communication and
+            teamwork abilities.
+          </p>
 
-            <p>
-              I hold the AWS Certified Cloud Practitioner certification,
-              validating my expertise in cloud solutions.
-            </p>
-          </article>
-
-          <article className={styles.details}>
-            <button
-              className={styles.curiosities}
-              onClick={() => newCuriosity()}
-            >
-              <span className={styles.icon}>
-                <Lottie
-                  lottieRef={iconRef}
-                  animationData={icon}
-                  loop={false}
-                  autoplay={false}
-                  style={{ width: 200, height: 200 }}
-                />
-              </span>
-
-              <div className={styles.curiosity}>
-                <h3>{actualCuriosity.type}</h3>
-                <p>{actualCuriosity.text}</p>
-              </div>
-            </button>
-          </article>
+          <p>
+            I hold the AWS Certified Cloud Practitioner certification,
+            validating my expertise in cloud solutions.
+          </p>
         </main>
 
         <footer>
-          <Planet // Earth
-            width={"120%"}
-            planet={require("../../../public/assets/img/planets/earth.png")}
-            description="About me - Earth"
-            position={{ left: "-10%" }}
-            rotation={21.6} // 21.6
-            translation={0} // 20
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "inline-block",
-              position: "relative",
-            }}
-          />
+          <button className={styles.curiosities} onClick={() => newCuriosity()}>
+            <span className={styles.icon}>
+              <img
+                src={
+                  actualCuriosity.image ?? "https://i.imgur.com/QbJfwAG.jpeg"
+                }
+              />
+
+              <Lottie
+                lottieRef={iconPlay}
+                animationData={icon}
+                loop={false}
+                autoplay={false}
+              />
+            </span>
+
+            <div className={styles.curiosity}>
+              <h2>{actualCuriosity.type ?? "Curiosity"}</h2>
+              <p>
+                {actualCuriosity.text ??
+                  "Click here to see a curiosity about me"}
+              </p>
+            </div>
+          </button>
         </footer>
       </section>
+
+      <div className={styles.planet}>
+        <Planet // Earth
+          width={"120%"}
+          planet={require("../../../public/assets/img/planets/earth.png")}
+          description="About me - Earth"
+          position={{ left: "-10%" }}
+          rotation={21.6} // 21.6
+          translation={0} // 20
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "inline-block",
+            position: "relative",
+          }}
+        />
+      </div>
     </PlanetBackground>
   );
 };

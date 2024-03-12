@@ -3,9 +3,6 @@
 
 #earth {
   width: 100%;
-  height: 100%;
-
-  overflow: auto;
 
   color: colors.$text;
   font-family: fonts.$primary;
@@ -13,6 +10,10 @@
   position: relative;
 
   padding: 8.5rem 0 0 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
   header {
     .title {
@@ -29,7 +30,8 @@
         height: 100%;
         max-height: 30vh;
 
-        border-radius: 50%;
+        border-radius: 32px;
+        border: 4px solid colors.$border;
       }
 
       h1 {
@@ -43,66 +45,120 @@
     width: auto;
     height: auto;
 
-    article.presentation {
-      padding: 2rem 0;
+    p {
+      width: 75%;
 
-      p {
-        width: 70%;
+      margin: 1rem auto;
 
-        margin: 1rem auto;
-
-        font-size: 1.3rem;
-        font-weight: 400;
-        text-align: justify;
-        line-height: 2rem;
-      }
-    }
-
-    article.details {
-      width: 100%;
-      height: 20%;
-
-      button.curiosities {
-        background: none;
-
-        width: 70%;
-        height: 100%;
-
-        margin: 0 auto;
-
-        border: solid colors.$text 0.15rem;
-        border-radius: 16px;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-
-        color: colors.$text;
-
-        .curiosity {
-          width: 100%;
-
-          h3 {
-            text-align: left;
-          }
-
-          p {
-            font-weight: 500;
-
-            text-align: justify;
-          }
-        }
-      }
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-align: justify;
+      line-height: 2rem;
     }
   }
 
   footer {
-    height: 35vh;
+    width: 100%;
+    height: 12rem;
 
-    margin: 2rem 0 0 0;
+    position: relative;
 
-    pointer-events: none;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    button.curiosities {
+      background: none;
+
+      height: 100%;
+
+      margin: 0 auto;
+      padding: 0 1rem;
+
+      border: none;
+      box-shadow: 0 0 0px 4px colors.$border;
+      border-radius: 32px;
+
+      display: flex;
+      gap: 2rem;
+
+      color: colors.$text;
+
+      &:hover {
+        transition: 0.5s all;
+
+        .icon > div {
+          height: 0px;
+          opacity: 0;
+        }
+
+        .icon > img {
+          height: 100%;
+          opacity: 1;
+          transform: translateX(-1rem);
+          border-radius: 32px 0 0 32px;
+        }
+      }
+
+      .icon {
+        height: 100%;
+
+        transition: 0.5s all;
+
+        div {
+          transition: 0.5s all;
+
+          height: 100%;
+          opacity: 1;
+
+          transform: translateY(-1rem);
+        }
+
+        img {
+          transition: 0.5s all;
+
+          height: 0px;
+          opacity: 0;
+
+          border-radius: 32px;
+
+          image-resolution: 5000dpi;
+        }
+      }
+
+      .curiosity {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h2 {
+          font-size: 2rem;
+          text-align: left;
+
+          margin: 0;
+        }
+
+        p {
+          font-size: 1.3rem;
+          font-weight: 500;
+          text-align: left;
+
+          margin: 0;
+        }
+      }
+    }
   }
+}
+
+.planet {
+  width: 100%;
+  height: 35vh;
+
+  margin: 4rem 0 0 0;
+
+  overflow: hidden;
 }

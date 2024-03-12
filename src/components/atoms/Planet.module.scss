@@ -39,7 +39,7 @@ figure.planet {
 
   transition: 0.3s all;
 
-  &:hover {
+  &:hover:not(.unhover) {
     transform: scale(1.1);
 
     border: solid 2px $selection-border;

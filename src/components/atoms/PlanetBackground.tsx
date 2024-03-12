@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 
 import styles from "./PlanetBackground.module.scss";
 import useTravelStore from "../../store/TravelStore";
