@@ -1,5 +1,4 @@
 import React, { CSSProperties, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import styles from "./Planet.module.scss";
@@ -7,14 +6,14 @@ import styles from "./Planet.module.scss";
 type PlanetType = {
   width?: number | string;
   height?: number | string;
-  planet: any;
-  ring?: any;
-  description?: string;
-  colors?: string[];
-  position?: object;
+  link?: string;
+  planet: string;
+  ring?: string;
+  position?: CSSProperties;
   rotation?: number;
   translation?: number;
-  link?: string;
+  colors?: string[];
+  description?: string;
   style?: CSSProperties;
   imageStyle?: CSSProperties;
 };
@@ -22,22 +21,22 @@ type PlanetType = {
 const Planet = ({
   width,
   height,
+  link,
   planet,
   ring,
-  description,
-  colors,
   position,
   rotation,
   translation,
-  link,
+  colors,
+  description,
   style,
   imageStyle,
 }: PlanetType) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const [planetTitle, planetDescription] = description.split("-");
-  const planetCaption = useRef(null);
 
+  const planetCaption = useRef(null);
   const captionPosition = (event: React.MouseEvent<HTMLDivElement>) => {
     const captionPosition = planetCaption.current;
 
@@ -60,17 +59,11 @@ const Planet = ({
     }
   };
 
-  const translationAnimationStyles = isHovered
-    ? {
-        animation: `${styles.translationAnim} ${
-          translation ?? 0
-        }s linear infinite paused`,
-      }
-    : {
-        animation: `${styles.translationAnim} ${
-          translation ?? 0
-        }s linear infinite`,
-      };
+  const translationAnimationStyles = {
+    animation: `${styles.translationAnim} ${
+      translation ?? 0
+    }s linear infinite ${isHovered ? "paused" : ""}`,
+  };
 
   return (
     <Link
@@ -88,7 +81,7 @@ const Planet = ({
           ...position,
           ...translationAnimationStyles,
         }}
-        className={`${styles.planet} ${!colors ? styles.unhover : null}`}
+        className={`${styles.planet} ${!link ? styles.unLink : null}`}
         id={link}
         onMouseOver={captionPosition}
       >
@@ -111,16 +104,13 @@ const Planet = ({
 
         {link ? (
           <figcaption ref={planetCaption}>
-            <span
-              className={styles.title}
-              style={{ color: colors ? colors[0] : null }}
-            >
+            <span className={styles.title} style={{ color: colors[0] ?? null }}>
               {planetTitle}
             </span>
 
             <span
               className={styles.description}
-              style={{ color: colors ? colors[1] : null }}
+              style={{ color: colors[1] ?? null }}
             >
               {planetDescription}
             </span>

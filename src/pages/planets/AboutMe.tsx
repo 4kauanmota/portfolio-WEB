@@ -40,7 +40,6 @@ const AboutMe = () => {
       const random = Math.abs(
         Math.round(Math.random() * curiosities.length - 1)
       );
-
       setActualCuriosity(curiosities[random]);
     }
   };
