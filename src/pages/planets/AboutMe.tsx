@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 
 import styles from "./AboutMe.module.scss";
-import Planet from "../../components/atoms/Planet";
 import PlanetBackground from "../../components/atoms/PlanetBackground";
 import { getCuriosities } from "../../api/curiosities";
 import info from "../../../public/animations/info.json";
@@ -80,7 +79,11 @@ const AboutMe = () => {
         </main>
 
         <footer>
-          <button className={styles.curiosities} onClick={() => newCuriosity()}>
+          <button
+            className={styles.curiosities}
+            onClick={() => newCuriosity()}
+            onTouchStart={() => newCuriosity()}
+          >
             <span className={styles.icon}>
               <img
                 src={
