@@ -45,7 +45,7 @@ const AboutMe = () => {
   };
 
   return (
-    <PlanetBackground>
+    <PlanetBackground planet="earth" rotation={21.6}>
       <section id={styles.earth}>
         <header>
           <span className={styles.introduction}>
@@ -106,23 +106,6 @@ const AboutMe = () => {
           </button>
         </footer>
       </section>
-
-      <div className={styles.planet}>
-        <Planet // Earth
-          width={"120%"}
-          planet={require("../../../public/assets/img/planets/earth.png")}
-          description="About me - Earth"
-          position={{ left: "-10%" }}
-          rotation={21.6} // 21.6
-          translation={0} // 20
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "inline-block",
-            position: "relative",
-          }}
-        />
-      </div>
     </PlanetBackground>
   );
 };

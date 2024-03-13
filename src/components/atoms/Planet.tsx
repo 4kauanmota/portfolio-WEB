@@ -25,10 +25,10 @@ const Planet = ({
   planet,
   ring,
   position,
-  rotation,
-  translation,
+  rotation = 0,
+  translation = 0,
   colors,
-  description,
+  description = " - ",
   style,
   imageStyle,
 }: PlanetType) => {

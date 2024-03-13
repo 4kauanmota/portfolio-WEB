@@ -129,11 +129,16 @@
   }
 }
 
-.planet {
-  width: 100%;
-  height: 35vh;
-  margin: 4rem 0 0 0;
-  overflow: hidden;
+@media (max-width: screens.$tablet-max) {
+  #earth {
+    padding: 3rem 0 0 0;
+
+    main {
+      p {
+        width: 85%;
+      }
+    }
+  }
 }
 
 @media (max-width: screens.$mobile-max) {
@@ -144,9 +149,6 @@
       .introduction {
         flex-direction: column;
 
-        img {
-        }
-
         h1 {
           margin: 3rem 0 0 0;
         }
@@ -156,34 +158,6 @@
     main {
       p {
         width: 90%;
-      }
-    }
-
-    footer {
-      button.curiosities {
-        &:hover {
-          .icon > div {
-          }
-
-          .icon > img {
-          }
-        }
-
-        .icon {
-          div {
-          }
-
-          img {
-          }
-        }
-
-        .curiosity {
-          h2 {
-          }
-
-          p {
-          }
-        }
       }
     }
   }
