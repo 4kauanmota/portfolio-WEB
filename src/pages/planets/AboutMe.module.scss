@@ -1,5 +1,6 @@
 @use "/src/theme/colors.scss";
 @use "/src/theme/fonts.scss";
+@use "/src/theme/screens.scss";
 
 #earth {
   width: 100%;
@@ -12,7 +13,7 @@
   gap: 3rem;
 
   header {
-    .title {
+    .introduction {
       width: 70%;
       height: 100%;
       display: flex;
@@ -48,13 +49,14 @@
   }
 
   footer {
-    width: 100%;
+    width: 90%;
     height: 12rem;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 3rem;
+    margin: 0 auto;
 
     button.curiosities {
       background: none;
@@ -132,4 +134,57 @@
   height: 35vh;
   margin: 4rem 0 0 0;
   overflow: hidden;
+}
+
+@media (max-width: screens.$mobile-max) {
+  #earth {
+    padding: 3rem 0 0 0;
+
+    header {
+      .introduction {
+        flex-direction: column;
+
+        img {
+        }
+
+        h1 {
+          margin: 3rem 0 0 0;
+        }
+      }
+    }
+
+    main {
+      p {
+        width: 90%;
+      }
+    }
+
+    footer {
+      button.curiosities {
+        &:hover {
+          .icon > div {
+          }
+
+          .icon > img {
+          }
+        }
+
+        .icon {
+          div {
+          }
+
+          img {
+          }
+        }
+
+        .curiosity {
+          h2 {
+          }
+
+          p {
+          }
+        }
+      }
+    }
+  }
 }

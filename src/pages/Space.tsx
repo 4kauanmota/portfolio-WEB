@@ -1,17 +1,13 @@
-import React from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import styles from "./Space.module.scss";
 
-import SpaceBackground from "../components/molecules/SpaceBackground";
 import Planet from "../components/atoms/Planet";
 
 const Space = () => {
   return (
     <>
       <div id={styles.space}>
-        <SpaceBackground />
-
         <MouseParallax
           enableOnTouchDevice
           isAbsolutelyPositioned

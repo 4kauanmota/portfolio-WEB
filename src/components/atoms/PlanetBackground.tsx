@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import styles from "./PlanetBackground.module.scss";
 import useTravelStore from "../../store/TravelStore";

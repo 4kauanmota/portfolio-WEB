@@ -1,4 +1,3 @@
-import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 import "./App.scss";

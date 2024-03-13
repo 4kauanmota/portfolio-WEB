@@ -1,3 +1,5 @@
+@use "/src/theme/screens.scss";
+
 $background: #000000;
 
 * {
@@ -17,4 +19,22 @@ body {
 
 main {
   height: 100%;
+}
+
+@media (max-width: screens.$laptop-max) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: screens.$tablet-max) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: screens.$tablet-max) {
+  html {
+    font-size: 12px;
+  }
 }

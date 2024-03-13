@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 
@@ -48,7 +48,7 @@ const AboutMe = () => {
     <PlanetBackground>
       <section id={styles.earth}>
         <header>
-          <span className={styles.title}>
+          <span className={styles.introduction}>
             <img src={require("../../../public/assets/img/perfil.jpg")} />
             <h1>About Me</h1>
           </span>

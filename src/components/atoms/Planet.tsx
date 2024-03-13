@@ -1,4 +1,4 @@
-import React, { CSSProperties, useRef, useState } from "react";
+import { CSSProperties, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Planet.module.scss";
