@@ -3,15 +3,14 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 
 import styles from "./AboutMe.module.scss";
+import curiosities from "../../data/curiosities";
 import PlanetBackground from "../../components/atoms/PlanetBackground";
-import { getCuriosities } from "../../api/curiosities";
 import info from "../../../public/animations/info.json";
 
 const AboutMe = () => {
   const iconPlay = useRef(null);
   const [icon, setIcon] = useState(info as any);
 
-  const [curiosities, setCuriosities] = useState(null);
   const [actualCuriosity, setActualCuriosity] = useState({
     type: null,
     image: null,
@@ -19,11 +18,6 @@ const AboutMe = () => {
   });
 
   useEffect(() => {
-    const loadCuriosities = async () => {
-      setCuriosities(await getCuriosities());
-    };
-    loadCuriosities();
-
     const iconInterval = setInterval(() => {
       iconPlay?.current?.stop();
       iconPlay?.current?.play();
@@ -49,7 +43,7 @@ const AboutMe = () => {
         <header>
           <span className={styles.introduction}>
             <img src={require("../../../public/assets/img/perfil.jpg")} />
-            <h1>About Me</h1>
+            <h1>About me</h1>
           </span>
         </header>
 
@@ -61,7 +55,8 @@ const AboutMe = () => {
             honed my skills in coding, focusing on creating and refactoring code
             to make websites more responsive and dynamic.
           </p>
-
+          <br />
+          <br />
           <p>
             In my internship as a Mobile Developer, I specialized in React
             Native and AWS, actively participating in agile meetings following
@@ -71,7 +66,8 @@ const AboutMe = () => {
             enhanced my technical skills but also refined my communication and
             teamwork abilities.
           </p>
-
+          <br />
+          <br />
           <p>
             I hold the AWS Certified Cloud Practitioner certification,
             validating my expertise in cloud solutions.

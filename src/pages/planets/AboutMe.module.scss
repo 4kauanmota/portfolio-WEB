@@ -7,14 +7,14 @@
   color: colors.$text;
   font-family: fonts.$primary;
   position: relative;
-  padding: 8.5rem 0 0 0;
+  padding: 11.5rem 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 
   header {
     .introduction {
-      width: 70%;
+      width: 60%;
       height: 100%;
       display: flex;
       justify-content: space-evenly;
@@ -29,7 +29,7 @@
       }
 
       h1 {
-        font-size: 3.5rem;
+        font-size: 4.4rem;
         font-weight: 600;
       }
     }
@@ -40,7 +40,7 @@
 
     p {
       width: 75%;
-      margin: 1rem auto;
+      margin: 0 auto;
       font-size: 1.3rem;
       font-weight: 400;
       text-align: justify;
@@ -132,6 +132,17 @@
 @media (max-width: screens.$tablet-max) {
   #earth {
     padding: 3rem 0 0 0;
+
+    header {
+      .introduction {
+        width: 100%;
+
+        h1 {
+          font-size: 3.5em;
+          font-weight: 600;
+        }
+      }
+    }
 
     main {
       p {
