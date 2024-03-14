@@ -186,14 +186,14 @@
 
         .icon {
           position: relative;
-          height: 8rem;
+          height: 12rem;
           display: flex;
           justify-content: center;
 
           div {
             height: 100%;
 
-            transform: translate(0, 0);
+            transform: translate(0, 0) scale(0.9);
             position: absolute;
           }
 

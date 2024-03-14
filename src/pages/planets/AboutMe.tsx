@@ -75,11 +75,7 @@ const AboutMe = () => {
         </main>
 
         <footer>
-          <button
-            className={styles.curiosities}
-            onClick={() => newCuriosity()}
-            onTouchStart={() => newCuriosity()}
-          >
+          <button className={styles.curiosities} onClick={() => newCuriosity()}>
             <span className={styles.icon}>
               <img
                 src={
