@@ -51,11 +51,6 @@
   footer {
     max-width: 90%;
     height: 12rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
     margin: 0 auto;
     padding: 0 2rem;
 
@@ -79,12 +74,12 @@
       background: none;
       height: 100%;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 2rem 0 1rem;
       border: none;
       box-shadow: 0 0 0px 4px colors.$border;
       border-radius: 32px;
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       color: colors.$text;
 
       .icon {
@@ -95,7 +90,7 @@
           transition: 0.5s all;
           height: 100%;
           opacity: 1;
-          transform: translateY(-1rem);
+          transform: translate(0, -1rem);
         }
 
         img {
@@ -107,7 +102,6 @@
       }
 
       .curiosity {
-        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -155,7 +149,7 @@
 
 @media (max-width: screens.$mobile-max) {
   #earth {
-    padding: 3rem 0 0 0;
+    padding: 4rem 0 0 0;
 
     header {
       .introduction {
@@ -170,6 +164,63 @@
     main {
       p {
         width: 90%;
+      }
+    }
+
+    footer {
+      height: auto;
+
+      &:hover .curiosities {
+        .icon > div {
+        }
+
+        .icon > img {
+          border-radius: 16px;
+          transform: translate(0, 0);
+        }
+      }
+
+      button.curiosities {
+        padding: 2rem;
+        flex-direction: column;
+
+        .icon {
+          position: relative;
+          height: 8rem;
+          display: flex;
+          justify-content: center;
+
+          div {
+            height: 100%;
+
+            transform: translate(0, 0);
+            position: absolute;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+          }
+        }
+
+        .curiosity {
+          gap: 1rem;
+
+          h2 {
+            font-size: 2rem;
+            text-align: left;
+            margin: 0;
+          }
+
+          p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: left;
+            margin: 0;
+            line-height: 1.5;
+          }
+        }
       }
     }
   }
