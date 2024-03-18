@@ -29,7 +29,7 @@ const PlanetBackground = ({
 
           <div className={styles.planet}>
             <Planet
-              planet={require(`../../../public/assets/img/planets/${planet}.png`)}
+              planet={require(`../../../public/assets/img/planets/high/${planet}+.png`)}
               position={{ left: 0 }}
               rotation={rotation}
             />
