@@ -37,6 +37,9 @@
 
   main {
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
 
     p {
       width: 75%;

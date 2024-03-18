@@ -1,8 +1,8 @@
 import { MouseParallax } from "react-just-parallax";
+import Starfield from "react-starfield";
+import { ReactNebula } from "@flodlc/nebula";
 
 import styles from "./Background.module.scss";
-import { ReactNebula } from "@flodlc/nebula";
-import Starfield from "react-starfield";
 import useTravelStore from "../../store/TravelStore";
 
 const Background = () => {

@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import styles from "./PlanetBackground.module.scss";
 import useTravelStore from "../../store/TravelStore";
@@ -11,31 +12,39 @@ const PlanetBackground = ({
   planet,
   rotation,
 }: PlanetBackgroundType) => {
-  const { travel, setTravel } = useTravelStore();
+  const { setTravel } = useTravelStore();
+  const [travelState, setTravelState] = useState(true);
 
   useEffect(() => {
     setTravel();
 
     setTimeout(() => {
       setTravel();
+      setTravelState(false);
     }, 1000);
   }, []);
 
   return (
     <>
-      {!travel ? (
+      {!travelState && (
         <>
-          <span className={styles.planetBackground}>{children}</span>
+          {children}
 
-          <div className={styles.planet}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className={styles.planet}
+          >
             <Planet
               planet={require(`../../../public/assets/img/planets/high/${planet}+.png`)}
               position={{ left: 0 }}
               rotation={rotation}
             />
-          </div>
+          </motion.div>
         </>
-      ) : null}
+      )}
     </>
   );
 };

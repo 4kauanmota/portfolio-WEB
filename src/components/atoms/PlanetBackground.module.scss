@@ -1,16 +1,10 @@
 @use "/src/theme/animations.scss";
 @use "/src/theme/screens.scss";
 
-.planetBackground {
-  overflow: scroll;
-
-  animation: animations.$fadeIn;
-}
-
 .planet {
   width: 100%;
   height: 30vh;
-  margin: 5rem 0 0 0;
+  padding: 5rem 0 0 0;
   overflow: hidden;
 
   a {
