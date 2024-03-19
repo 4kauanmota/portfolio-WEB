@@ -116,9 +116,7 @@ const AboutMe = () => {
               viewport={{ once: true }}
               className={styles.icon}
             >
-              <motion.img
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <img
                 src={
                   actualCuriosity.image ?? "https://i.imgur.com/QbJfwAG.jpeg"
                 }
