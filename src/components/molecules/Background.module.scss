@@ -10,4 +10,10 @@
       animation: animations.$fadeIn;
     }
   }
+
+  .travel {
+    canvas {
+      animation: animations.$fadeInOut;
+    }
+  }
 }

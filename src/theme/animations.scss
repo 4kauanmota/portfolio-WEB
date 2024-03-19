@@ -18,6 +18,22 @@
   }
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 $fadeIn: fadeIn 1s ease-in;
 
 $fadeOut: fadeOut 1s ease-out;
+
+$fadeInOut: fadeInOut 2s ease-in-out;

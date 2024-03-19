@@ -20,6 +20,7 @@
     "react-router-dom": "^6.21.1",
     "react-star-sky": "^1.0.3",
     "react-starfield": "^1.0.3",
+    "starfield-react": "^3.1.0-dev-5",
     "zustand": "^4.5.1"
   },
   "devDependencies": {

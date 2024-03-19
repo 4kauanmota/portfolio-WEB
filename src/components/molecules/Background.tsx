@@ -1,9 +1,23 @@
 import { MouseParallax } from "react-just-parallax";
-import Starfield from "react-starfield";
+import { WindowSizeStarField } from "starfield-react";
 import { ReactNebula } from "@flodlc/nebula";
 
 import styles from "./Background.module.scss";
 import useTravelStore from "../../store/TravelStore";
+import { useState } from "react";
+
+const ExampleProps = {
+  count: 939,
+  speed: 2.8,
+  starRatio: 81,
+  starSize: 2,
+  randomColor: true,
+  starStyle: "#fff",
+  starShape: "round",
+  clear: true,
+  bgStyle: "#000",
+  noBackground: false,
+};
 
 const Background = () => {
   const { travel } = useTravelStore();
@@ -18,6 +32,19 @@ const Background = () => {
         >
           {travel ? (
             <>
+              <span className={styles.travel}>
+                <WindowSizeStarField
+                  count={1000}
+                  fps={60}
+                  starSize={0.8}
+                  starRatio={80}
+                  speed={12}
+                  starShape={"round"}
+                  noBackground={true}
+                  style={{ zIndex: "1" }}
+                />
+              </span>
+
               <ReactNebula
                 config={{
                   starsCount: 0,
@@ -29,12 +56,6 @@ const Background = () => {
                   solarSystemOrbite: 0,
                   solarSystemSpeedOrbit: 0,
                 }}
-              />
-
-              <Starfield
-                starCount={1000}
-                starColor={[255, 255, 255]}
-                speedFactor={1.8}
               />
             </>
           ) : (

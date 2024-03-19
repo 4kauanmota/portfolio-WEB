@@ -21,7 +21,7 @@ const PlanetBackground = ({
     setTimeout(() => {
       setTravel();
       setTravelState(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
