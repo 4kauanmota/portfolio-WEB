@@ -132,18 +132,18 @@ const AboutMe = () => {
 
             <div className={styles.curiosity}>
               <motion.h2
-                initial={{ opacity: 0, x: 40 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
                 viewport={{ once: true }}
               >
                 {actualCuriosity.type ?? "Curiosity"}
               </motion.h2>
 
               <motion.p
-                initial={{ opacity: 0, x: 40 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 1, delay: 0.4 }}
                 viewport={{ once: true }}
               >
                 {actualCuriosity.text ??

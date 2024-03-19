@@ -18,26 +18,24 @@ const Background = () => {
         >
           {travel ? (
             <>
-              <span className={styles.travel}>
-                <ReactNebula
-                  config={{
-                    starsCount: 0,
-                    nebulasIntensity: 8,
-                    cometFrequence: 0,
-                    starsRotationSpeed: 0,
-                    sunScale: 0,
-                    planetsScale: 0,
-                    solarSystemOrbite: 0,
-                    solarSystemSpeedOrbit: 0,
-                  }}
-                />
+              <ReactNebula
+                config={{
+                  starsCount: 0,
+                  nebulasIntensity: 8,
+                  cometFrequence: 0,
+                  starsRotationSpeed: 0,
+                  sunScale: 0,
+                  planetsScale: 0,
+                  solarSystemOrbite: 0,
+                  solarSystemSpeedOrbit: 0,
+                }}
+              />
 
-                <Starfield
-                  starCount={1000}
-                  starColor={[255, 255, 255]}
-                  speedFactor={1.8}
-                />
-              </span>
+              <Starfield
+                starCount={1000}
+                starColor={[255, 255, 255]}
+                speedFactor={1.8}
+              />
             </>
           ) : (
             <span className={styles.stars}>
