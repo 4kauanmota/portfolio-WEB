@@ -16,7 +16,7 @@ const curiosities = [
   },
   {
     type: "Anime",
-    image: "https://i.imgur.com/8oqLNfi.png",
+    image: "https://i.imgur.com/IsYXblB.png",
     text: "My favorite anime movie is A Silent Voice",
   },
   {
@@ -51,7 +51,7 @@ const curiosities = [
   },
   {
     type: "Game",
-    image: "https://i.imgur.com/nPE0bJU.png",
+    image: "https://i.imgur.com/W0aUFsQ.png",
     text: "Katana Zero was the most remarkable game i've ever played",
   },
 ];
